@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>儋州公安通信运维综合管理平台</title>
+    <link rel="stylesheet" href="/static/CSS/bootstrap.css">
+    <!--[if lte IE 6]>
+    <!-- bsie css 补丁文件 -->
+    <link rel="stylesheet" type="text/css" href="/static/CSS/bootstrap-ie6.min.css">
+    <!-- bsie 额外的 css 补丁文件 -->
+    <link rel="stylesheet" type="text/css" href="/static/CSS/ie.css">
+    <![endif]-->
+    {% block css %}
+    {% endblock %}
+</head>
+<body >
+<div style="margin-top: 3px"></div>
+    <div>
+    <div style="margin-left: 20px;float: left;" class="nav-divider"><img src="/static/images/logo.png" alt=""></div>
+    <div style="margin-left: 250px">
+        <ul style="font-size: 18px" class="nav nav-pills">
+           <li class="active"><a href="/">首页</a></li>
+           <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                 运维 <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                 <li><a href="/ServerHostList">服务器</a></li>
+                 <li><a href="#">网络设备</a></li>
+                 <li><a href="#">监控设备</a></li>
+                 <li class="divider"></li>
+                 <li><a href="#">分离的链接</a></li>
+              </ul>
+           </li>
+           <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                 设备 <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                 <li><a href="#">Swing</a></li>
+                 <li><a href="#">jMeter</a></li>
+                 <li><a href="#">EJB</a></li>
+                 <li class="divider"></li>
+                 <li><a href="#">分离的链接</a></li>
+              </ul>
+           </li>
+           <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                 申请 <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                 <li><a href="#">Swing</a></li>
+                 <li><a href="#">jMeter</a></li>
+                 <li><a href="#">EJB</a></li>
+                 <li class="divider"></li>
+                 <li><a href="#">分离的链接</a></li>
+              </ul>
+           </li>
+           <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                 工作记录 <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                 <li><a href="#">Swing</a></li>
+                 <li><a href="#">jMeter</a></li>
+                 <li><a href="#">EJB</a></li>
+                 <li class="divider"></li>
+                 <li><a href="#">分离的链接</a></li>
+              </ul>
+           </li>
+        </ul>
+    </div>
+    </div>
+<!--菜单结束-->
+    <div style="">
+    <!--内容开始-->
+        {% block content %}
+
+
+        {% endblock %}
+    </div>
+<!--底部内容开始-->
+    <div>公用底部内容</div>
+    <!--[if lte IE 6]>
+    <!-- bsie js 补丁只在IE6中才执行 -->
+    <script type="text/javascript" src="/static/JS/bootstrap-ie.js"></script>
+    <![endif]-->
+    <script src="/static/JS/jquery-3.0.0.js"></script>
+    <script src="/static/JS/bootstrap.js"></script>
+</body>
+</html>
