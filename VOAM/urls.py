@@ -14,7 +14,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from website.views import Index,AddVideoDevice,AddBasicInfo
+
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$',Index),
+    url(r'^AddVideoDevice/$',AddVideoDevice),
+    url(r'^AddBasicInfo/$',AddBasicInfo),
 ]

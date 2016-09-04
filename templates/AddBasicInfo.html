@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action='/AddBasicInfo/' method="post">
+        <span>状态名:</span>{{ devicestatusform.devicestatus }}
+        <br/>
+
+        <input type="submit" value="添加"><span>{{ status }}</span>
+    </form>
+    <form action='/AddBasicInfo/' method="post">
+        <span>设备分组:</span>{{ devicegroupform.devicegroup }}
+        <br/>
+
+        <input type="submit" value="添加"><span>{{ status }}</span>
+    </form>
+    <form action='/AddBasicInfo/' method="post">
+        <span>设备区域:</span>{{ deviceregionform.deviceregion }}
+        <br/>
+
+        <input type="submit" value="添加"><span>{{ status }}</span>
+    </form>
+    <form action='/AddBasicInfo/' method="post">
+        <span>摄像头方向:</span>{{ videodirectionform.videodirection }}
+        <br/>
+
+        <input type="submit" value="添加"><span>{{ status }}</span>
+    </form>
+    <form action='/AddBasicInfo/' method="post">
+        <span>摄像头分类:</span>{{ videotypeform.videotype }}
+        <br/>
+
+        <input type="submit" value="添加"><span>{{ status }}</span>
+    </form>
+    <form action='/AddBasicInfo/' method="post">
+        <span>设备品牌:</span>{{ devicebrandform.devicebrand }}
+        <br/>
+
+        <input type="submit" value="添加"><span>{{ status }}</span>
+    </form>
+    <form action='/AddBasicInfo/' method="post">
+        品牌:<select name="devicebrandid">
+                {% for id in devicebrandid %}
+                    <option id="devicebrandid" name="devicebrandid" value="{{ id.id }}">{{ id.name }}</option>
+                {% endfor %}
+            </select>
+        <span>设备型号:</span>{{ devicetypeform.devicetype }}
+        <br/>
+
+        <input type="submit" value="添加"><span>{{ status }}</span>
+    </form>
+
+</body>
+</html>
