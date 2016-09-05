@@ -5,6 +5,7 @@ from django.shortcuts import render_to_response
 from website.forms import AddVideoDeviceForm,AddDeviceStatusForm,AddDeviceGroupForm,AddDeviceRegionForm,AddVideoDirectionForm,AddVideoTypeForm,AddDeviceBrandForm,AddDeviceTypeForm
 from website.models import DeviceStatus,DeviceGroup,DeviceRegion,VideoDirection,VideoType,DeviceBrand,DeviceType,ServerHostDevice,VideoDevice,NVRDevice,NetworkDevice
 
+
 def Index(request):
     good_serverlist = ServerHostDevice.objects.filter()
     bed_serverlist = ServerHostDevice.objects.filter()
@@ -27,7 +28,7 @@ def AddBasicInfo(request):
         devicebrand = request.POST.get('devicebrand')
         devicetype = request.POST.get('devicetype')
         print devicestatus,devicegroup,deviceregion,videodirection,videotype,devicebrand,devicetype
-        if devicestatus != 0:
+        if not devicestatus:
             devicestatusf = AddDeviceStatusForm(request.POST)
             if devicestatusf.is_valid():
                 result = DeviceStatus.objects.filter(name=devicestatus).count()
@@ -46,8 +47,11 @@ def AddBasicInfo(request):
                                                'videodirectionform': videodirectionform, 'videotypeform': videotypeform,
                                                'devicebrandform': devicebrandform, 'devicetypeform': devicetypeform,
                                                'devicebrandid': devicebrandid, 'devicestatusstatus': '已存在'})
+            else:
+                print devicegroup
+                pass
 
-        elif devicegroup != 0:
+        elif not devicegroup:
             print 'elif'
             devicegroupf = AddDeviceGroupForm(request.POST)
             print devicegroupf

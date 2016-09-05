@@ -214,3 +214,46 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 151, in get_response
     % (callback.__module__, view_name))
 ValueError: The view website.views.AddBasicInfo didn't return an HttpResponse object. It returned None instead.
+2016-09-05 17:24:33,217 [Thread-3:139668740937472] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddBasicInfo/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 151, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view website.views.AddBasicInfo didn't return an HttpResponse object. It returned None instead.
+2016-09-05 17:25:07,848 [Thread-3:140264798586624] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddBasicInfo/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 151, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view website.views.AddBasicInfo didn't return an HttpResponse object. It returned None instead.
+2016-09-05 17:26:17,118 [Thread-2:139968018118400] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddBasicInfo/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/zzj/PycharmProjects/VOAM/VOAM/urls.py", line 17, in <module>
+    from website.views import Index,AddVideoDevice,AddBasicInfo
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 54
+    elif devicegroup != 0:
+       ^
+SyntaxError: invalid syntax
+2016-09-05 17:30:46,603 [Thread-5:139968018118400] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddBasicInfo/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 151, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view website.views.AddBasicInfo didn't return an HttpResponse object. It returned None instead.
+2016-09-05 17:33:26,174 [Thread-3:139731123828480] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddBasicInfo/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 151, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view website.views.AddBasicInfo didn't return an HttpResponse object. It returned None instead.
+2016-09-05 17:35:33,892 [Thread-3:139812047648512] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddBasicInfo/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 151, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view website.views.AddBasicInfo didn't return an HttpResponse object. It returned None instead.

@@ -461,3 +461,33 @@
 2016-09-05 12:16:23,495 [Dummy-1:140347795994368] [django.db.backends:89] [utils:execute] [DEBUG]- (0.006) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
 2016-09-05 12:16:27,925 [Thread-2:140347717375744] [django.db.backends:89] [utils:execute] [DEBUG]- (0.003) SET SQL_AUTO_IS_NULL = 0; args=None
 2016-09-05 12:16:27,931 [Thread-2:140347717375744] [django.db.backends:89] [utils:execute] [DEBUG]- (0.005) SELECT `website_devicebrand`.`id`, `website_devicebrand`.`name` FROM `website_devicebrand`; args=()
+2016-09-05 17:24:26,576 [Dummy-1:139668752287488] [django.db.backends:89] [utils:execute] [DEBUG]- (0.031) SET SQL_AUTO_IS_NULL = 0; args=None
+2016-09-05 17:24:26,917 [Dummy-1:139668752287488] [django.db.backends:89] [utils:execute] [DEBUG]- (0.031) SET SQL_AUTO_IS_NULL = 0; args=None
+2016-09-05 17:24:26,957 [Dummy-1:139668752287488] [django.db.backends:89] [utils:execute] [DEBUG]- (0.039) SHOW FULL TABLES; args=None
+2016-09-05 17:24:27,001 [Dummy-1:139668752287488] [django.db.backends:89] [utils:execute] [DEBUG]- (0.034) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2016-09-05 17:24:30,415 [Thread-2:139668740937472] [django.db.backends:89] [utils:execute] [DEBUG]- (0.033) SET SQL_AUTO_IS_NULL = 0; args=None
+2016-09-05 17:24:30,448 [Thread-2:139668740937472] [django.db.backends:89] [utils:execute] [DEBUG]- (0.033) SELECT `website_devicebrand`.`id`, `website_devicebrand`.`name` FROM `website_devicebrand`; args=()
+2016-09-05 17:25:03,524 [Dummy-1:140264809936640] [django.db.backends:89] [utils:execute] [DEBUG]- (0.038) SET SQL_AUTO_IS_NULL = 0; args=None
+2016-09-05 17:25:03,822 [Dummy-1:140264809936640] [django.db.backends:89] [utils:execute] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2016-09-05 17:25:03,868 [Dummy-1:140264809936640] [django.db.backends:89] [utils:execute] [DEBUG]- (0.045) SHOW FULL TABLES; args=None
+2016-09-05 17:25:03,911 [Dummy-1:140264809936640] [django.db.backends:89] [utils:execute] [DEBUG]- (0.040) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2016-09-05 17:25:05,707 [Thread-2:140264798586624] [django.db.backends:89] [utils:execute] [DEBUG]- (0.036) SET SQL_AUTO_IS_NULL = 0; args=None
+2016-09-05 17:25:05,744 [Thread-2:140264798586624] [django.db.backends:89] [utils:execute] [DEBUG]- (0.037) SELECT `website_devicebrand`.`id`, `website_devicebrand`.`name` FROM `website_devicebrand`; args=()
+2016-09-05 17:26:15,575 [Dummy-1:139968103786240] [django.db.backends:89] [utils:execute] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2016-09-05 17:26:15,810 [Dummy-1:139968103786240] [django.db.backends:89] [utils:execute] [DEBUG]- (0.031) SET SQL_AUTO_IS_NULL = 0; args=None
+2016-09-05 17:26:15,845 [Dummy-1:139968103786240] [django.db.backends:89] [utils:execute] [DEBUG]- (0.036) SHOW FULL TABLES; args=None
+2016-09-05 17:26:15,880 [Dummy-1:139968103786240] [django.db.backends:89] [utils:execute] [DEBUG]- (0.033) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2016-09-05 17:30:44,105 [Thread-4:139968018118400] [django.db.backends:89] [utils:execute] [DEBUG]- (0.030) SET SQL_AUTO_IS_NULL = 0; args=None
+2016-09-05 17:30:44,141 [Thread-4:139968018118400] [django.db.backends:89] [utils:execute] [DEBUG]- (0.035) SELECT `website_devicebrand`.`id`, `website_devicebrand`.`name` FROM `website_devicebrand`; args=()
+2016-09-05 17:33:22,122 [Dummy-1:139731208017664] [django.db.backends:89] [utils:execute] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2016-09-05 17:33:22,732 [Dummy-1:139731208017664] [django.db.backends:89] [utils:execute] [DEBUG]- (0.283) SET SQL_AUTO_IS_NULL = 0; args=None
+2016-09-05 17:33:22,830 [Dummy-1:139731208017664] [django.db.backends:89] [utils:execute] [DEBUG]- (0.097) SHOW FULL TABLES; args=None
+2016-09-05 17:33:22,873 [Dummy-1:139731208017664] [django.db.backends:89] [utils:execute] [DEBUG]- (0.042) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2016-09-05 17:33:23,648 [Thread-2:139731123828480] [django.db.backends:89] [utils:execute] [DEBUG]- (0.031) SET SQL_AUTO_IS_NULL = 0; args=None
+2016-09-05 17:33:23,682 [Thread-2:139731123828480] [django.db.backends:89] [utils:execute] [DEBUG]- (0.033) SELECT `website_devicebrand`.`id`, `website_devicebrand`.`name` FROM `website_devicebrand`; args=()
+2016-09-05 17:35:30,548 [Dummy-1:139812058998528] [django.db.backends:89] [utils:execute] [DEBUG]- (0.032) SET SQL_AUTO_IS_NULL = 0; args=None
+2016-09-05 17:35:30,847 [Dummy-1:139812058998528] [django.db.backends:89] [utils:execute] [DEBUG]- (0.037) SET SQL_AUTO_IS_NULL = 0; args=None
+2016-09-05 17:35:30,891 [Dummy-1:139812058998528] [django.db.backends:89] [utils:execute] [DEBUG]- (0.044) SHOW FULL TABLES; args=None
+2016-09-05 17:35:30,930 [Dummy-1:139812058998528] [django.db.backends:89] [utils:execute] [DEBUG]- (0.037) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2016-09-05 17:35:31,306 [Thread-2:139812047648512] [django.db.backends:89] [utils:execute] [DEBUG]- (0.032) SET SQL_AUTO_IS_NULL = 0; args=None
+2016-09-05 17:35:31,337 [Thread-2:139812047648512] [django.db.backends:89] [utils:execute] [DEBUG]- (0.030) SELECT `website_devicebrand`.`id`, `website_devicebrand`.`name` FROM `website_devicebrand`; args=()
