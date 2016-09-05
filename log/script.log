@@ -257,3 +257,93 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 151, in get_response
     % (callback.__module__, view_name))
 ValueError: The view website.views.AddBasicInfo didn't return an HttpResponse object. It returned None instead.
+2016-09-05 19:14:46,507 [Thread-3:123145310715904] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-09-05 19:14:46,540 [Thread-4:123145310715904] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-09-05 19:14:52,308 [Thread-5:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddBasicInfo/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 151, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view website.views.AddBasicInfo didn't return an HttpResponse object. It returned None instead.
+2016-09-05 19:19:43,559 [Thread-3:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddBasicInfo/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 151, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view website.views.AddBasicInfo didn't return an HttpResponse object. It returned None instead.
+2016-09-05 21:07:23,012 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddBasicInfo/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 191, in AddBasicInfo
+    DeviceType.objects.create(brandid=devicebrandid,name=devicetype)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/fields/related.py", line 642, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "u'1'": "DeviceType.brandid" must be a "DeviceBrand" instance.
+2016-09-05 21:09:17,778 [Thread-3:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddBasicInfo/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 192, in AddBasicInfo
+    DeviceType.objects.create(brandid=devicebrandid,name=devicetype)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/fields/related.py", line 642, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "u'1'": "DeviceType.brandid" must be a "DeviceBrand" instance.
+2016-09-05 21:12:08,973 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddBasicInfo/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 190, in AddBasicInfo
+    result = DeviceType.objects.filter(name=devicetype,brandid_id=devicebrandid).count()
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 679, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 697, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/sql/query.py", line 1310, in add_q
+    clause, require_inner = self._add_q(where_part, self.used_aliases)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/sql/query.py", line 1338, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/sql/query.py", line 1200, in build_filter
+    lookups, value)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/fields/related.py", line 1761, in get_lookup_constraint
+    lookup_class(target.get_col(alias, source), val), AND)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/lookups.py", line 105, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/lookups.py", line 143, in get_prep_lookup
+    return self.lhs.output_field.get_prep_lookup(self.lookup_name, self.rhs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/fields/__init__.py", line 727, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/fields/__init__.py", line 985, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+2016-09-05 23:56:29,866 [Thread-6:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 10, in Index
+    good_serverlist = ServerHostDevice.objects.filter()
+AttributeError: type object 'ServerHostDevice' has no attribute 'objects'
+2016-09-05 23:57:35,046 [Thread-7:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 10, in Index
+    good_serverlist = DeviceGroup.objects.all()
+AttributeError: type object 'ServerHostDevice' has no attribute 'objects'
+2016-09-05 23:57:44,204 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 151, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view website.views.Index didn't return an HttpResponse object. It returned None instead.

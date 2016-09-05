@@ -7,8 +7,9 @@ from website.models import DeviceStatus,DeviceGroup,DeviceRegion,VideoDirection,
 
 
 def Index(request):
-    good_serverlist = ServerHostDevice.objects.filter()
-    bed_serverlist = ServerHostDevice.objects.filter()
+    good_serverlist = DeviceGroup.objects.all()
+    return render_to_response('index.html')
+
 
 def AddBasicInfo(request):
     devicestatusform = AddDeviceStatusForm()
@@ -28,7 +29,7 @@ def AddBasicInfo(request):
         devicebrand = request.POST.get('devicebrand')
         devicetype = request.POST.get('devicetype')
         print devicestatus,devicegroup,deviceregion,videodirection,videotype,devicebrand,devicetype
-        if not devicestatus:
+        if devicestatus != None:
             devicestatusf = AddDeviceStatusForm(request.POST)
             if devicestatusf.is_valid():
                 result = DeviceStatus.objects.filter(name=devicestatus).count()
@@ -48,11 +49,10 @@ def AddBasicInfo(request):
                                                'devicebrandform': devicebrandform, 'devicetypeform': devicetypeform,
                                                'devicebrandid': devicebrandid, 'devicestatusstatus': '已存在'})
             else:
-                print devicegroup
-                pass
+                temp = devicestatusf.errors.as_data()
+                print temp
 
-        elif not devicegroup:
-            print 'elif'
+        elif devicegroup != None:
             devicegroupf = AddDeviceGroupForm(request.POST)
             print devicegroupf
             if devicegroupf.is_valid():
@@ -79,7 +79,7 @@ def AddBasicInfo(request):
                                            'videodirectionform': videodirectionform, 'videotypeform': videotypeform,
                                            'devicebrandform': devicebrandform, 'devicetypeform': devicetypeform,
                                            'devicebrandid': devicebrandid})
-        elif deviceregion != 0:
+        elif deviceregion != None:
             deviceregionf = AddDeviceRegionForm(request.POST)
             if deviceregionf.is_valid():
                 result = DeviceRegion.objects.filter(name=deviceregion).count()
@@ -105,7 +105,7 @@ def AddBasicInfo(request):
                                            'videodirectionform': videodirectionform, 'videotypeform': videotypeform,
                                            'devicebrandform': devicebrandform, 'devicetypeform': devicetypeform,
                                            'devicebrandid': devicebrandid})
-        elif videodirection != 0:
+        elif videodirection != None:
             videodirectionf = AddVideoDirectionForm(request.POST)
             if videodirectionf.is_valid():
                 result = VideoDirection.objects.filter(name=videodirection).count()
@@ -131,7 +131,7 @@ def AddBasicInfo(request):
                                            'videodirectionform': videodirectionform, 'videotypeform': videotypeform,
                                            'devicebrandform': devicebrandform, 'devicetypeform': devicetypeform,
                                            'devicebrandid': devicebrandid})
-        elif videotype != 0:
+        elif videotype != None:
             videotypef = AddVideoTypeForm(request.POST)
             if videotypef.is_valid():
                 result = VideoType.objects.filter(name=videotype).count()
@@ -157,7 +157,7 @@ def AddBasicInfo(request):
                                            'videodirectionform': videodirectionform, 'videotypeform': videotypeform,
                                            'devicebrandform': devicebrandform, 'devicetypeform': devicetypeform,
                                            'devicebrandid': devicebrandid})
-        elif devicebrand != 0:
+        elif devicebrand != None:
             devicebrandf = AddDeviceBrandForm(request.POST)
             if devicebrandf.is_valid():
                 result = DeviceBrand.objects.filter(name=devicebrand).count()
@@ -183,13 +183,15 @@ def AddBasicInfo(request):
                                            'videodirectionform': videodirectionform, 'videotypeform': videotypeform,
                                            'devicebrandform': devicebrandform, 'devicetypeform': devicetypeform,
                                            'devicebrandid': devicebrandid})
-        elif devicetype != 0:
+        elif devicetype != None:
             devicetypef = AddDeviceTypeForm(request.POST)
             if devicetypef.is_valid():
-                devicebrandid = request.POST.get('devicebrandid')
-                result = DeviceType.objects.filter(name=devicetype,id=devicebrandid).count()
+                devicebrand_id = request.POST.get('devicebrandid')
+                devicetype = request.POST.get('devicetype')
+                result = DeviceType.objects.filter(name=devicetype,brandid_id=devicebrand_id).count()
                 if result == 0:
-                    DeviceType.objects.create(brandid=devicebrandid,name=devicetype)
+                    DeviceType.objects.create(brandid_id=devicebrand_id,name=devicetype)
+                    #devicebrandid = DeviceBrand.objects.all()
                     return render_to_response('AddBasicInfo.html',
                                               {'devicestatusform': devicestatusform, 'devicegroupform': devicegroupform,
                                                'deviceregionform': deviceregionform,
@@ -210,8 +212,8 @@ def AddBasicInfo(request):
                                            'videodirectionform': videodirectionform, 'videotypeform': videotypeform,
                                            'devicebrandform': devicebrandform, 'devicetypeform': devicetypeform,
                                            'devicebrandid': devicebrandid})
-    else:
-        return render_to_response('AddBasicInfo.html',
+
+    return render_to_response('AddBasicInfo.html',
                                   {'devicestatusform': devicestatusform, 'devicegroupform': devicegroupform,
                                    'deviceregionform': deviceregionform, 'videodirectionform': videodirectionform,
                                    'videotypeform': videotypeform, 'devicebrandform': devicebrandform,
