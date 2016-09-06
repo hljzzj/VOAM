@@ -1,37 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <form action='/AddVideoDevice/' method="post">
-        <span>设备ID:</span>{{ form.pid }}
-        <br/>
-        <span>名称:</span>{{ form.name }}
-        <br/>
-        设备分组:<select name="group">
-            {% for g in grouplist %}
-                <option id="group" name="group" value="{{ g.id }}">{{ g.name }}</option>
-            {% endfor %}
-        </select>
+{% extends "Master/muban.html" %}
+{% block content %}
+<body >
+<div class="panel panel-primary">
+    <div class="panel-heading">
+            <h3 class="panel-title">添加摄像头</h3>
+        </div>
+        <div class="panel-body">
+            <form action='/AddVideoDevice/' method="post">
+                <span class="label label-info">设备ID:</span>{{ form.pid }}
+                <span class="label label-info">名称:</span>{{ form.name }}
+                </br>
+                <span  class="label label-info">设备分组:</span><select name="group">
+                    {% for g in grouplist %}
+                        <option id="group" name="group" value="{{ g.id }}">{{ g.name }}</option>
+                    {% endfor %}
+                </select>
+                <span class="label label-info">区域划分:</span><select name="region">
+                        {% for item in deviceregion_item %}
+                            <option id="region" name="region" value="{{ item.id }}">{{ item.name }}</option>
+                        {% endfor %}
+                    </select>
+                <span class="label label-info">摄像头方向:</span><select name="direction">
+                        {% for item in videodirection_item %}
+                            <option id="direction" name="direction" value="{{ item.id }}">{{ item.name }}</option>
+                        {% endfor %}
+                    </select>
+                <span class="label label-info">分类:</span><select name="videotype">
+                        {% for item in videotype_item %}
+                            <option id="videotype" name="videotype" value="{{ item.id }}">{{ item.name }}</option>
+                        {% endfor %}
+                    </select>
 
-        <br/>
-        <span>摄像头区域划分:</span>{{ form.region }}
-        <br/>
-        <span>摄像头分类:</span>{{ form.vtype }}
-        <br/>
-        <span>摄像头IP:</span>{{ form.ip }}
-        <br/>
-        <span>摄像头帐号:</span>{{ form.username }}
-        <br/>
-        <span>摄像头密码:</span>{{ form.password }}
-        <br/>
-        <span>摄像头经度:</span>{{ form.vtype }}
-        <br/>
-        <span>摄像头纬度:</span>{{ form.vtype }}
-        <br/>
-        <input type="submit" value="添加"><span>{{ status }}</span>
-    </form>
+                    <span class="label label-info">品牌:</span><select name="devicebrand">
+                        {% for item in devicebrand_item %}
+                            <option id="devicebrand" name="devicebrand" value="{{ item.id }}">{{ item.name }}</option>
+                        {% endfor %}
+                    </select>
+                <span class="label label-info">型号:</span><select name="devicetype">
+                    {% for item in devicetype_item %}
+                        <option id="devicetype" name="devicetype" value="{{ item.id }}">{{ item.name }}</option>
+                    {% endfor %}
+
+            </select>
+                </br></br>
+                <span class="label label-info">IP:</span>{{ form.ip }}
+                <span class="label label-info">帐号:</span>{{ form.username }}
+                <span class="label label-info">密码:</span>{{ form.password }}
+                <span class="label label-info">经度:</span>{{ form.gpslon }}
+                <span class="label label-info">纬度:</span>{{ form.gpswei }}
+                <br/>
+                <input class="btn btn-success" type="submit" value="添加"><span>{{ status }}</span>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
-</html>
+
+
+{% endblock %}

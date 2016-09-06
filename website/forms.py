@@ -6,12 +6,13 @@ class AddVideoDeviceForm(forms.Form):
     name = forms.CharField()
     group = forms.CharField()
     region = forms.CharField()
+    direction = forms.CharField()
     vtype = forms.CharField()
     ip = forms.GenericIPAddressField(protocol='ipv4')
     username = forms.CharField()
     password = forms.CharField()
     gpslon = forms.CharField()
-    gpswei = forms.CharField
+    gpswei = forms.CharField()
 
 class AddDeviceStatusForm(forms.Form):
     devicestatus = forms.CharField()

@@ -1,108 +1,51 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>儋州公安通信运维综合管理平台</title>
     <link rel="stylesheet" href="/static/CSS/bootstrap.css">
     <!--[if lte IE 6]>
-    <!-- bsie css 补丁文件 -->
     <link rel="stylesheet" type="text/css" href="/static/CSS/bootstrap-ie6.min.css">
-    <!-- bsie 额外的 css 补丁文件 -->
     <link rel="stylesheet" type="text/css" href="/static/CSS/ie.css">
     <![endif]-->
+
     {% block css %}
     {% endblock %}
 </head>
 <body >
 <div style="margin-top: 3px"></div>
-    <div class="b_nav">
-            <ul class="clearfix">
-                <li class="index current"><a href="/" onclick="sdnClick('18866')">首页<span></span></a></li>
-                <li class="plaza"><a href="/mv/square">MV<i></i></a>
-                    <ul style="display: none;" class="childUL plazaUL">
-                        <li><a href="/mv/square">MV广场</a></li>
-                        <li><a href="/mv/rank">MV榜单</a></li>
-                    </ul>
-                </li>
-                <li class="list"><a href="/top.php" onclick="sdnClick('18865')">榜单<span></span></a></li>
-                <li class="clan" style="z-index: 200"><a href="/index.php?action=clanList" onclick="sdnClick('18864')">公会<i></i></a>
-					<ul style="display: none;" class="childUL secUL">
-                        <li style="display: none;" class="clanAll"><a class="clanRank" href="/index.php?action=clan&amp;id=" onclick="sdnClick('18864')">我的公会</a></li>
-                		<li><a class="clanActive" href="/index.php?action=clanList&amp;clanType=active" onclick="sdnClick('18864')">公会活动</a></li>
-                		<li><a class="clanLive" href="/index.php" onclick="logClick('2742');Kg.Cookie.write('_fx_indexToFuns', 1 , 5, '/')">推荐公会</a></li>
-                		<li><a class="clanAll" href="/index.php?action=clanList&amp;clanType=all" onclick="sdnClick('18864')">所有公会</a></li>
-                        <li class=""><a class="clanRank" href="/index.php?action=clanList&amp;clanType=rank" onclick="sdnClick('18864')">公会排行</a></li>
-                        <li class="lastLi"><a href="/index.php?action=clanCompanyList" onclick="sdnClick('18863')">唱片公司</a></li>
-                	</ul>
-                </li>
-
-                <li class="shop"><a href="/index.php?action=property" onclick="sdnClick('18862')">商城</a></li>
-
-
-                            <li class="singGirl"><a href="/index.php?action=singChannel">女团<i></i></a>
-                        <ul style="display: none;" class="childUL secUL">
-                            <li><a class="singGW" onclick="logClick('5573')" href="http://sing.fanxing.kugou.com/" target="_blank">SING官网</a></li>
-                            <li><a class="singPD" onclick="logClick('5574')" href="/index.php?action=singChannel">SING频道</a></li>
-
-                        </ul>
-                 </li>
-
-
-                                <li class="starRoom"><a href="http://live.kugou.com/" target="_blank">酷狗LIVE</a></li>
-                <li class="index-nav-zhongchou"><a href="/zc/" onclick="logClick('7290')" target="_blank">众筹</a></li>
-                <li class="download"><a href="/ac/mobile" target="_blank">下载<i></i><span class="dot" id="downloadRedPot"></span></a>
-					<ul style="display: none;" class="lastUL childUL">
-						<li><a class="fxPCClient" href="/ac/fxPCClient" target="_blank">繁星直播PC端<span class="new">new</span></a></li>
-                		<li><a class="android" href="/ac/mobile" target="_blank">繁星直播手机端</a></li>
-                		<li class="lastLi"><a class="accompany" href="/ac/accompany" target="_blank">繁星直播伴奏</a></li>
-                	</ul>
-                </li>
-                            </ul>
-            <div class="searchBox">
-                <input x-webkit-speech="" value="房间号或艺人昵称" onkeydown="return(searchStarEnter(event))" onkeyup="return searchKeyUp(event)" id="search_str" type="text">
-                <a href="javascript:searchStar();"></a>
-                <ul class="hotWordList">
-                    <li class="hotSearch"><span>热门搜索</span></li>
-
+<nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">VOAM</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul role="menu" class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
                 </ul>
-            </div>
-            <div class="cont">
-                <div id="tpl_top_tool_login" class="fxtpl-html">
-                <span id="J_nick_warn_icon" style="display:none">
-                    <i class="nick_warn_icon1"></i>
-                    <i class="nick_warn_icon2" style="display:none"></i>
-                </span>
-        <span class="name" id="index2015Name">
-            <a href="javascript:void(0);" class="index2015ClickDrop"></a>
-            <a href="/index.php?action=myProfile" target="_blank" id="lgn_name" onclick="sdnClick('18870')">
-                <!--[$fxUserInfo_js.nickName]-->
-            </a>
-
-            <span class="index2015DropDownDiv">
-
-                <span><a id="_changeNickName" class="change_name" href="javascript:;" title="更换昵称" onclick="sdnClick('18869')">修改昵称</a></span>
-                <span><a href="javascript:void(0);" onclick="return logout();" title="退出帐号">退出帐号</a></span>
-            </span>
-        </span>
-        <span id="headTips2015"><a class="hoverGreen2015" href="/index.php?action=msgBox" target="_blank" title="查看消息" onclick="sdnClick('18872')">消息<!--[if $hasNewMsg_js]--><i class="pot" id="msgBoxPot" style="display:inline-block;"></i><!--[else]--><i class="pot" id="msgBoxPot" style="display:none;"></i><!--[/if]--></a><em></em>
-            <!--[if $hasNewMsg_js]-->
-            <em id="msg_box">
-                <i class="tip"></i>
-                <a class="msg_main" id="msg_target" target="_blank" href="/index.php?action=msgBox">您有新消息未查看</a>
-                <a class="msg_close" href="javascript:;" onclick="hideMsgBox()"></a>
-            </em>
-            <!--[/if]-->
-        </span>
-                <span class="span2015last"><a class="hoverGreen2015" href="/ac/kefu" target="_blank" title="客服">客服</a><em></em></span>
-                </div>
-                <div id="tpl_top_tool">
-                    <span><a href="javascript:;" title="登录" onclick="return showLogin()" id="fxLogin">登录</a><em></em></span>
-                    <span><a href="javascript:;" title="注册" onclick="return showReg()" id="fxReg">注册</a><em></em></span>
-                    <span class="span2015last"><a href="/ac/kefu" target="_blank" title="客服">客服</a></span>
-                </div>
-            </div>
-            </div>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
 <!--菜单结束-->
     <div style="">
     <!--内容开始-->
@@ -113,11 +56,11 @@
     </div>
 <!--底部内容开始-->
     <div>公用底部内容</div>
+    <script src="/static/JS/jquery-3.0.0.js"></script>
+    <script src="/static/JS/bootstrap.js"></script>
     <!--[if lte IE 6]>
     <!-- bsie js 补丁只在IE6中才执行 -->
     <script type="text/javascript" src="/static/JS/bootstrap-ie.js"></script>
     <![endif]-->
-    <script src="/static/JS/jquery-3.0.0.js"></script>
-    <script src="/static/JS/bootstrap.js"></script>
 </body>
 </html>
