@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22f86b17-100f-494d-b256-2c2b74fce953" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/migrations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tools/insert.py" afterPath="$PROJECT_DIR$/Tools/insert.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VOAM/urls.py" afterPath="$PROJECT_DIR$/VOAM/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/all.log" afterPath="$PROJECT_DIR$/log/all.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/script.log" afterPath="$PROJECT_DIR$/log/script.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/AddVideoDevice.html" afterPath="$PROJECT_DIR$/templates/AddVideoDevice.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/admin.py" afterPath="$PROJECT_DIR$/website/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/forms.py" afterPath="$PROJECT_DIR$/website/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/models.py" afterPath="$PROJECT_DIR$/website/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/views.py" afterPath="$PROJECT_DIR$/website/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/migrations/0002_auto_20160908_1556.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -563,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1473148680185</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="K49">
+      <created>1473444656238</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1473444656238</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
