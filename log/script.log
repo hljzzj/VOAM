@@ -760,3 +760,337 @@ Traceback (most recent call last):
     super(Connection, self).__init__(*args, **kwargs2)
 OperationalError: (2013, "Lost connection to MySQL server at 'reading initial communication packet', system error: 104")
 2016-09-06 11:24:51,936 [Thread-69:140426623309568] [django.request:170] [base:get_response] [WARNING]- Not Found: /AddVideo
+2016-09-06 17:18:42,669 [Thread-44:140114825139968] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 367, in AddVideoDevice
+    form = AddVideoDevice(request.POST)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 366, in AddVideoDevice
+    if request.method == 'POST':
+AttributeError: 'QueryDict' object has no attribute 'method'
+2016-09-06 17:35:32,541 [Thread-2:139775174784768] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 367, in AddVideoDevice
+    form = AddVideoDevice(request.POST)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 366, in AddVideoDevice
+    if request.method == 'POST':
+AttributeError: 'QueryDict' object has no attribute 'method'
+2016-09-07 00:33:46,392 [Thread-2:140563847456512] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/zzj/PycharmProjects/VOAM/VOAM/urls.py", line 17, in <module>
+    from website.views import Index,AddVideoDevice,AddBasicInfo
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 5, in <module>
+    from website.forms import AddVideoDeviceForm,AddDeviceStatusForm,AddDeviceGroupForm,AddDeviceRegionForm,AddVideoDirectionForm,AddVideoTypeForm,AddDeviceBrandForm,AddDeviceTypeForm
+  File "/home/zzj/PycharmProjects/VOAM/website/forms.py", line 4, in <module>
+    class AddVideoDeviceForm(forms.Form):
+  File "/home/zzj/PycharmProjects/VOAM/website/forms.py", line 5, in AddVideoDeviceForm
+    pid = forms.CharField(null=True)
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/fields.py", line 214, in __init__
+    super(CharField, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'null'
+2016-09-07 14:41:38,905 [Thread-7:139915240863488] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-09-07 16:52:15,731 [Thread-44:139954395019008] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 386, in AddVideoDevice
+    VideoDevice.objects.create(pid=pid,name=name,group=group,region=region,direction=direction,vtype=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related.py", line 642, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "u'2'": "VideoDevice.group" must be a "DeviceGroup" instance.
+2016-09-07 17:02:22,878 [Thread-3:140084972979968] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 386, in AddVideoDevice
+    VideoDevice.objects.create(pid=pid,name=name,group_id=group,region=region,direction=direction,vtype=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related.py", line 642, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "u'1'": "VideoDevice.region" must be a "DeviceRegion" instance.
+2016-09-07 17:02:39,238 [Thread-5:139800666765056] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 386, in AddVideoDevice
+    VideoDevice.objects.create(pid=pid,name=name,groupid_id=group,region=region,direction=direction,vtype=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related.py", line 642, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "u'1'": "VideoDevice.region" must be a "DeviceRegion" instance.
+2016-09-07 17:03:47,561 [Thread-3:140139548374784] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 386, in AddVideoDevice
+    VideoDevice.objects.create(pid=pid,name=name,group_id=group,region=region,direction=direction,vtype=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related.py", line 642, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "u'1'": "VideoDevice.region" must be a "DeviceRegion" instance.
+2016-09-07 17:11:28,484 [Thread-5:140516346107648] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 386, in AddVideoDevice
+    VideoDevice.objects.create(pid=pid,name=name,group_id=group,region_id=region,direction=direction,vtype_id=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related.py", line 642, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "u'1'": "VideoDevice.direction" must be a "VideoDirection" instance.
+2016-09-07 17:22:28,341 [Thread-9:140516329322240] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 386, in AddVideoDevice
+    VideoDevice.objects.create(pid=pid,name=name,group_id=group,region_id=region,direction=direction,vtype_id=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related.py", line 642, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "u'1'": "VideoDevice.direction" must be a "VideoDirection" instance.
+2016-09-08 09:54:42,337 [Thread-7:140264191350528] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-09-08 09:54:46,668 [Thread-8:140264191350528] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 386, in AddVideoDevice
+    VideoDevice.objects.create(pid=pid,name=name,group_id=group,region_id=region,direction=direction,vtype_id=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related.py", line 642, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "u'1'": "VideoDevice.direction" must be a "VideoDirection" instance.
+2016-09-08 10:29:11,228 [Thread-44:139669702432512] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 386, in AddVideoDevice
+    VideoDevice.objects.create(pid=pid,name=name,group_id=group,region_id=region,direction=direction,vtype_id=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related.py", line 642, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "u'1'": "VideoDevice.direction" must be a "VideoDirection" instance.
+2016-09-08 15:59:30,788 [Thread-45:140616818222848] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 387, in AddVideoDevice
+    VideoDevice.objects.create(pid=pid,name=name,group_id=group,region_id=region,direction_id=direction,vtype_id=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 480, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'vtype_id' is an invalid keyword argument for this function
+2016-09-08 16:00:48,195 [Thread-3:140493641398016] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 387, in AddVideoDevice
+    VideoDevice.objects.create(pid=pid,name=name,groupid_id=group,regionid_id=region,directionid_id=direction,vtypeid_id=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 734, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 762, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 846, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 885, in _do_insert
+    using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 129, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 226, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorvalue
+IntegrityError: (1048, "Column 'brandid_id' cannot be null")
+2016-09-08 16:09:49,170 [Thread-15:140635944249088] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 389, in AddVideoDevice
+    VideoDevice.objects.create(pid=pid,name=name,groupid_id=group,regionid_id=region,directionid_id=direction,vtypeid_id=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 734, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 762, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 846, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 885, in _do_insert
+    using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 129, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 226, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorvalue
+IntegrityError: (1048, "Column 'brandid_id' cannot be null")
+2016-09-08 16:11:23,722 [Thread-22:140636035585792] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 389, in AddVideoDevice
+    VideoDevice.objects.create(pid=pid,name=name,groupid_id=group,regionid_id=region,directionid_id=direction,vtypeid_id=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 734, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 762, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 846, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 885, in _do_insert
+    using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 129, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 226, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorvalue
+IntegrityError: (1048, "Column 'brandid_id' cannot be null")
+2016-09-08 16:12:28,200 [Thread-3:139657292515072] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 389, in AddVideoDevice
+    VideoDevice.objects.create(pid=pid,name=name,groupid_id=group,regionid_id=region,directionid_id=direction,vtypeid_id=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei,brandid=brand,dtypeid=dtype)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 468, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related.py", line 642, in __set__
+    self.field.rel.to._meta.object_name,
+ValueError: Cannot assign "u'1'": "VideoDevice.brandid" must be a "DeviceBrand" instance.
+2016-09-08 16:41:53,154 [Thread-41:139793467963136] [django.request:170] [base:get_response] [WARNING]- Not Found: /ServerHost/1/
+2016-09-08 18:56:05,592 [Thread-9:139991746860800] [django.request:170] [base:get_response] [WARNING]- Not Found: /VideoDevice/1/
+2016-09-08 19:14:03,220 [Thread-2:140345058739968] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-09-08 23:47:36,567 [Thread-48:140344817604352] [django.request:170] [base:get_response] [WARNING]- Not Found: /AddVideoDevice/remote.html
+2016-09-09 09:01:19,761 [Thread-15:140361940047616] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateVideoDevice/1/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 401, in UpdateVideoDevice
+    updatevideodevice = UpdateVideoDeviceForm()
+NameError: global name 'UpdateVideoDeviceForm' is not defined
+2016-09-09 09:04:56,120 [Thread-24:140361940047616] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateVideoDevice/1/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 401, in UpdateVideoDevice
+    updatevideodevice = UpdateVideoDeviceForm()
+NameError: global name 'UpdateVideoDeviceForm' is not defined
+2016-09-09 09:06:19,964 [Thread-27:140361940047616] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateVideoDevice/1/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 401, in UpdateVideoDevice
+    updatevideodevice = UpdateVideoDeviceForm()
+NameError: global name 'UpdateVideoDeviceForm' is not defined
+2016-09-09 09:11:24,413 [Thread-32:140361940047616] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateVideoDevice/1/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 401, in UpdateVideoDevice
+    updatevideodevice = UpdateVideoDeviceForm()
+NameError: global name 'UpdateVideoDeviceForm' is not defined

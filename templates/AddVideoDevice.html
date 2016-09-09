@@ -1,6 +1,7 @@
 {% extends "Master/muban.html" %}
 {% block content %}
 <body >
+
 <div class="panel panel-primary">
     <div class="panel-heading">
             <h3 class="panel-title">添加摄像头</h3>
@@ -10,35 +11,35 @@
                 <span class="label label-info">设备ID:</span>{{ form.pid }}
                 <span class="label label-info">名称:</span>{{ form.name }}
                 </br>
-                <span  class="label label-info">设备分组:</span><select name="group">
+                <span  class="label label-info">分组:</span><select name="group">
                     {% for g in grouplist %}
                         <option id="group" name="group" value="{{ g.id }}">{{ g.name }}</option>
                     {% endfor %}
                 </select>
-                <span class="label label-info">区域划分:</span><select name="region">
+                <span class="label label-info">区域:</span><select name="region">
                         {% for item in deviceregion_item %}
                             <option id="region" name="region" value="{{ item.id }}">{{ item.name }}</option>
                         {% endfor %}
                     </select>
-                <span class="label label-info">摄像头方向:</span><select name="direction">
+                <span class="label label-info">方向:</span><select name="direction">
                         {% for item in videodirection_item %}
                             <option id="direction" name="direction" value="{{ item.id }}">{{ item.name }}</option>
                         {% endfor %}
                     </select>
-                <span class="label label-info">分类:</span><select name="videotype">
+                <span class="label label-info">分类:</span><select name="vtype">
                         {% for item in videotype_item %}
-                            <option id="videotype" name="videotype" value="{{ item.id }}">{{ item.name }}</option>
+                            <option id="vtype" name="vtype" value="{{ item.id }}">{{ item.name }}</option>
                         {% endfor %}
                     </select>
 
-                    <span class="label label-info">品牌:</span><select name="devicebrand">
+                    <span class="label label-info">品牌:</span><select name="brand">
                         {% for item in devicebrand_item %}
                             <option id="devicebrand" name="devicebrand" value="{{ item.id }}">{{ item.name }}</option>
                         {% endfor %}
                     </select>
-                <span class="label label-info">型号:</span><select name="devicetype">
+                <span class="label label-info">型号:</span><select name="dtype">
                     {% for item in devicetype_item %}
-                        <option id="devicetype" name="devicetype" value="{{ item.id }}">{{ item.name }}</option>
+                        <option id="id_brand" name="brand" value="{{ item.id }}">{{ item.name }}</option>
                     {% endfor %}
 
             </select>
@@ -49,10 +50,70 @@
                 <span class="label label-info">经度:</span>{{ form.gpslon }}
                 <span class="label label-info">纬度:</span>{{ form.gpswei }}
                 <br/>
-                <input class="btn btn-success" type="submit" value="添加"><span>{{ status }}</span>
+                <input class="btn btn-success" type="submit" value="添加"><span>{{ addstatus }}</span>
+
             </form>
         </div>
     </div>
+<div>
+        <h1 style="text-align: center">摄像头列表</h1>
+        <table style="text-align: center;width: 80%" class="table table-bordered">
+            <tr>
+                <td>设备编号</td>
+                <td>名称</td>
+                <td>区域</td>
+                <td>IP</td>
+                <td>状态</td>
+                <td>分组</td>
+                <td>方向</td>
+                <td>类型</td>
+                <td>品牌</td>
+                <td>型号</td>
+                <td>更新时间</td>
+                <td>创建时间</td>
+                <td>修改</td>
+                <td>删除</td>
+
+            </tr>
+            {% for item in videodevice_list %}
+                <tr>
+                    <td>{{ item.pid }}</td>
+                    <td><a href="../VideoDevice/{{ item.id }}/" target="_blank">{{ item.name }}</a></td>
+                    <td>{{ item.regionid.name }}</td>
+                    <td>{{ item.ip}}</td>
+                    <td>{{ item.statusid.name}}</td>
+                    <td>{{ item.groupid.name}}</td>
+                    <td>{{ item.directionid.name}}</td>
+                    <td>{{ item.vtypeid.name}}</td>
+                    <td>{{ item.brandid.name}}</td>
+                    <td>{{ item.dtypeid.name}}</td>
+                    <td style="font-size: 10px">{{ item.updatetime|date:"Y-m-d" }}<br>{{ item.updatetime|date:"H:i:s" }}</td>
+                    <td>{{ item.addtime|date:"Y-m-d" }}</td>
+                    <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" data-id="{{ item.id }}">修改</button></td>
+
+                    <td><button class="btn btn-success" value="del">删除</button></td>
+                </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        。。。
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 

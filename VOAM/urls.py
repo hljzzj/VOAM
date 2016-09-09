@@ -14,7 +14,7 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from website.views import Index,AddVideoDevice,AddBasicInfo
+from website.views import Index,AddVideoDevice,AddBasicInfo,UpdateVideoDevice
 
 
 urlpatterns = [
@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^$',Index),
     url(r'^AddVideoDevice/$',AddVideoDevice),
     url(r'^AddBasicInfo/$',AddBasicInfo),
+    url(r'^UpdateVideoDevice/(?P<videoID>\d*)/$',UpdateVideoDevice),
 ]
