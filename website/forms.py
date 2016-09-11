@@ -16,11 +16,11 @@ class AddVideoDeviceForm(forms.Form):
     gpslon = forms.CharField(required=False)
     gpswei = forms.CharField(required=False)
 
-class UpdateVideoDevice(forms.Form):
+class UpdateVideoDeviceForm(forms.Form):
     pid = forms.CharField(required=False) # required=False允许为空
     name = forms.CharField()
     group = forms.CharField()
-    region = forms.CharField()
+    region = forms.Select()
     direction = forms.CharField()
     vtype = forms.CharField()
     brand = forms.CharField()

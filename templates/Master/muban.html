@@ -8,11 +8,22 @@
     <link rel="stylesheet" type="text/css" href="/static/CSS/bootstrap-ie6.min.css">
     <link rel="stylesheet" type="text/css" href="/static/CSS/ie.css">
     <![endif]-->
-
+    <script src="/static/JS/jquery-3.0.0.js"></script>
+    <script src="/static/JS/bootstrap.js"></script>
     {% block css %}
     {% endblock %}
+
 </head>
 <body >
+
+
+    <!--[if lte IE 6]>
+    <!-- bsie js 补丁只在IE6中才执行 -->
+    <script type="text/javascript" src="/static/JS/bootstrap-ie.js"></script>
+    <![endif]-->
+    {% block javascript %}
+    {% endblock %}
+
 <div style="margin-top: 3px"></div>
 <nav class="navbar navbar-inverse">
         <div class="container">
@@ -56,11 +67,6 @@
     </div>
 <!--底部内容开始-->
     <div>公用底部内容</div>
-    <script src="/static/JS/jquery-3.0.0.js"></script>
-    <script src="/static/JS/bootstrap.js"></script>
-    <!--[if lte IE 6]>
-    <!-- bsie js 补丁只在IE6中才执行 -->
-    <script type="text/javascript" src="/static/JS/bootstrap-ie.js"></script>
-    <![endif]-->
+
 </body>
 </html>

@@ -1,4 +1,5 @@
 {% extends "Master/muban.html" %}
+
 {% block content %}
 <body >
 
@@ -43,7 +44,7 @@
                     {% endfor %}
 
             </select>
-                </br></br>
+                <br><br>
                 <span class="label label-info">IP:</span>{{ form.ip }}
                 <span class="label label-info">帐号:</span>{{ form.username }}
                 <span class="label label-info">密码:</span>{{ form.password }}
@@ -78,7 +79,7 @@
             {% for item in videodevice_list %}
                 <tr>
                     <td>{{ item.pid }}</td>
-                    <td><a href="../VideoDevice/{{ item.id }}/" target="_blank">{{ item.name }}</a></td>
+                    <td><a href="../UpdateVideoDevice/{{ item.id }}/" target="_blank">{{ item.name }}</a></td>
                     <td>{{ item.regionid.name }}</td>
                     <td>{{ item.ip}}</td>
                     <td>{{ item.statusid.name}}</td>
@@ -89,33 +90,21 @@
                     <td>{{ item.dtypeid.name}}</td>
                     <td style="font-size: 10px">{{ item.updatetime|date:"Y-m-d" }}<br>{{ item.updatetime|date:"H:i:s" }}</td>
                     <td>{{ item.addtime|date:"Y-m-d" }}</td>
-                    <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" data-id="{{ item.id }}">修改</button></td>
-
-                    <td><button class="btn btn-success" value="del">删除</button></td>
+                    <td><input data-toggle="modal" data-target="#update" id="{{ item.id }}"  class="btn bt-sm btn-success radius" type="button" value="修改" onclick="editInfo(this)" /></td>
+                    <td><input id="${vs.index+1}" class="btn bt-sm btn-danger radius" type="button" value="删除" onclick="delInfo(this)" /></td>
                 </tr>
             {% endfor %}
 
         </table>
     </div>
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        。。。
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-        <button type="button" class="btn btn-primary">保存</button>
-      </div>
-    </div>
-  </div>
-</div>
+
+
+
 </body>
 
+
+{% endblock %}
+
+{% block javascript %}
 
 {% endblock %}
