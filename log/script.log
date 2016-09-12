@@ -1317,3 +1317,5 @@ Traceback (most recent call last):
     print 'ID:' + id + 'pid:' + pid + 'name:' + name + 'group:' + group + 'region:' + region + 'direction:' + direction + 'vtype:' + vtype + 'brand:' + brand + 'dtype:' + dtype + 'username' + username + 'password:' + password + 'gpslon:' + gpslon + 'gpswei' + gpswei
 TypeError: cannot concatenate 'str' and 'builtin_function_or_method' objects
 2016-09-12 15:19:10,507 [Thread-7:140279154243328] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-09-12 22:58:32,541 [Thread-7:123145310715904] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-09-12 22:58:32,575 [Thread-8:123145310715904] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
