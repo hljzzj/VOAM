@@ -90,8 +90,8 @@
                     <td>{{ item.dtypeid.name}}</td>
                     <td style="font-size: 10px">{{ item.updatetime|date:"Y-m-d" }}<br>{{ item.updatetime|date:"H:i:s" }}</td>
                     <td>{{ item.addtime|date:"Y-m-d" }}</td>
-                    <td><input data-toggle="modal" data-target="#update" id="{{ item.id }}"  class="btn bt-sm btn-success radius" type="button" value="修改" onclick="editInfo(this)" /></td>
-                    <td><input id="${vs.index+1}" class="btn bt-sm btn-danger radius" type="button" value="删除" onclick="delInfo(this)" /></td>
+                    <td><a class="btn bt-sm btn-success radius" type="button" href="../UpdateVideoDevice/{{ item.id }}/" target="_blank">修改</a></td>
+                    <td><a class="btn bt-sm btn-danger radius" type="button" href="../DelVideoDevice/{{ item.id }}/" target="_blank">删除</a></td>
                 </tr>
             {% endfor %}
 

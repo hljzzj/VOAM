@@ -424,17 +424,16 @@ def UpdateVideoDevice(request,videoID):
             gpswei = request.POST.get('gpswei', None)
             result = VideoDevice.objects.filter(ip=ip).exclude(id=videoID).count()  # 查找IP列相同与ID列不同的值有多少
             result1 = VideoDevice.objects.filter(pid=pid).exclude(id=videoID).count()
-            print 'ID:' + videoID + ',' + 'pid:' + pid + ','  + 'name:' + name + ','  + 'group:' + group + ','  + 'region:' + region + ','  + 'direction:' + direction + ','  + 'vtype:' + vtype + ','  + 'brand:' + brand + ','  + 'dtype:' + dtype + ','  + 'username:' + username + ','  + 'password:' + password + ','  + 'gpslon:' + gpslon + ','  + 'gpswei' + gpswei
+            print 'ID:' + videoID + ',' + 'pid:' + pid + ',' + 'name:' + name + ',' + 'group:' + group + ',' + 'region:' + region + ',' + 'direction:' + direction + ',' + 'vtype:' + vtype + ',' + 'brand:' + brand + ',' + 'dtype:' + dtype + ',' + 'username:' + username + ',' + 'password:' + password + ',' + 'gpslon:' + gpslon + ',' + 'gpswei' + gpswei
             if result == 0 and result1 == 0:
                 VideoDevice.objects.filter(id=videoID).update(pid=pid, name=name, groupid_id=group, regionid_id=region,
                                            directionid_id=direction, vtypeid_id=vtype, ip=ip, username=username,
                                            password=password, gpslon=gpslon, gpswei=gpswei, brandid_id=brand,
                                            dtypeid_id=dtype)
-                return render_to_response('UpdateDevice.html', {'grouplist': group_item,
+                return render_to_response('Status.html', {'grouplist': group_item,
                                                                   'devicebrand_item': devicebrand_item,
                                                                   'devicetype_item': devicetype_item,
                                                                   'deviceregion_item': deviceregion_item,
-                                                                  'videotype_item': videotype_item,
                                                                   'videotype_item': videotype_item,
                                                                   'videodirection_item': videodirection_item,
                                                                   'videodeivce_ID': videodeivce_ID,
@@ -445,7 +444,6 @@ def UpdateVideoDevice(request,videoID):
                                                                   'devicetype_item': devicetype_item,
                                                                   'deviceregion_item': deviceregion_item,
                                                                   'videotype_item': videotype_item,
-                                                                  'videotype_item': videotype_item,
                                                                   'videodirection_item': videodirection_item,
                                                                   'videodeivce_ID': videodeivce_ID,
                                                                   'updatestatus': 'IP已存在'})
@@ -454,7 +452,6 @@ def UpdateVideoDevice(request,videoID):
                                                                   'devicebrand_item': devicebrand_item,
                                                                   'devicetype_item': devicetype_item,
                                                                   'deviceregion_item': deviceregion_item,
-                                                                  'videotype_item': videotype_item,
                                                                   'videotype_item': videotype_item,
                                                                   'videodirection_item': videodirection_item,
                                                                   'videodeivce_ID': videodeivce_ID,
@@ -465,7 +462,6 @@ def UpdateVideoDevice(request,videoID):
                                                               'devicetype_item': devicetype_item,
                                                               'deviceregion_item': deviceregion_item,
                                                               'videotype_item': videotype_item,
-                                                              'videotype_item': videotype_item,
                                                               'videodirection_item': videodirection_item,
                                                               'videodeivce_ID': videodeivce_ID})
     else:
@@ -474,8 +470,14 @@ def UpdateVideoDevice(request,videoID):
                                                           'devicetype_item': devicetype_item,
                                                           'deviceregion_item': deviceregion_item,
                                                           'videotype_item': videotype_item,
-                                                          'videotype_item': videotype_item,
                                                           'videodirection_item': videodirection_item,
                                                           'videodevice_ID': videodeivce_ID})
 
 
+def DelVideoDevice(request,videoID):
+    VideoDevice.objects.filter(id=videoID).delete()
+    ok = VideoDevice.objects.filter(id=videoID).count()
+    if ok == 0:
+        return render_to_response('Status.html',{'updatestatus':'删除成功'})
+    else:
+        return render_to_response('Status.html',{'updatestatus':'删除失败'})
