@@ -15,6 +15,8 @@ class AddVideoDeviceForm(forms.Form):
     password = forms.CharField(required=False)
     gpslon = forms.CharField(required=False)
     gpswei = forms.CharField(required=False)
+    telecom = forms.CharField()
+    nvrdevice = forms.CharField(required=False)
 
 class UpdateVideoDeviceForm(forms.Form):
     pid = forms.CharField(required=False) # required=False允许为空
@@ -30,6 +32,7 @@ class UpdateVideoDeviceForm(forms.Form):
     password = forms.CharField(required=False)
     gpslon = forms.CharField(required=False)
     gpswei = forms.CharField(required=False)
+    telecom = forms.CharField()
 
 
 class AddDeviceStatusForm(forms.Form):

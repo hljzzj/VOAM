@@ -24,24 +24,8 @@ class DeviceBrand(models.Model):
 class DeviceType(models.Model):
     brandid = models.ForeignKey(DeviceBrand,verbose_name='关联设备品牌ID')
     name = models.CharField(max_length=32,verbose_name='设备型号')
-
-class VideoDevice(models.Model):
-    pid = models.CharField(max_length=32,verbose_name='摄像头编号',null=True)
-    name = models.CharField(max_length=50,verbose_name='摄像头名称')
-    groupid = models.ForeignKey(DeviceGroup,verbose_name='摄像头分组')
-    regionid = models.ForeignKey(DeviceRegion,verbose_name='摄像头区域划分')
-    vtypeid = models.ForeignKey(VideoType,verbose_name='摄像头类别')
-    directionid = models.ForeignKey(VideoDirection,verbose_name='摄像头方向')
-    ip = models.GenericIPAddressField(protocol='ipv4',verbose_name='摄像机IP')
-    username = models.CharField(max_length=50,verbose_name='摄像头帐号',null=True)
-    password = models.CharField(max_length=50,verbose_name='摄像头密码',null=True)
-    gpslon = models.CharField(max_length=18,verbose_name='经度',null=True)
-    gpswei = models.CharField(max_length=18,verbose_name='纬度',null=True)
-    statusid = models.ForeignKey(DeviceStatus,verbose_name='设备状态',null=True)
-    brandid = models.ForeignKey(DeviceBrand, verbose_name='设备品牌')
-    dtypeid = models.ForeignKey(DeviceType,verbose_name='设备型号')
-    updatetime = models.DateTimeField(auto_now=True,verbose_name='主机更新时间',null=True)
-    addtime = models.DateTimeField(auto_now_add=True,verbose_name='主机添加时间')
+class Telecom(models.Model):
+    name = models.CharField(max_length=32,verbose_name='运营商')
 
 class NVRDevice(models.Manager):
     name = models.CharField(max_length=32,verbose_name='录像机名称')
@@ -60,4 +44,24 @@ class ServerHostDevice(models.Manager):
     ip = models.GenericIPAddressField(protocol='ipv4',verbose_name='服务器IP')
     username = models.CharField(max_length=32,verbose_name='服务器帐号')
     password = models.CharField(max_length=32,verbose_name='服务器密码')
+
+class VideoDevice(models.Model):
+    pid = models.CharField(max_length=32,verbose_name='摄像头编号',null=True)
+    name = models.CharField(max_length=50,verbose_name='摄像头名称')
+    groupid = models.ForeignKey(DeviceGroup,verbose_name='摄像头分组')
+    regionid = models.ForeignKey(DeviceRegion,verbose_name='摄像头区域划分')
+    vtypeid = models.ForeignKey(VideoType,verbose_name='摄像头类别')
+    directionid = models.ForeignKey(VideoDirection,verbose_name='摄像头方向')
+    ip = models.GenericIPAddressField(protocol='ipv4',verbose_name='摄像机IP')
+    username = models.CharField(max_length=50,verbose_name='摄像头帐号',null=True)
+    password = models.CharField(max_length=50,verbose_name='摄像头密码',null=True)
+    gpslon = models.CharField(max_length=18,verbose_name='经度',null=True)
+    gpswei = models.CharField(max_length=18,verbose_name='纬度',null=True)
+    statusid = models.ForeignKey(DeviceStatus,verbose_name='设备状态',null=True)
+    brandid = models.ForeignKey(DeviceBrand, verbose_name='设备品牌')
+    dtypeid = models.ForeignKey(DeviceType,verbose_name='设备型号')
+    updatetime = models.DateTimeField(auto_now=True,verbose_name='主机更新时间',null=True)
+    addtime = models.DateTimeField(auto_now_add=True,verbose_name='主机添加时间')
+    telecomid = models.ForeignKey(Telecom,verbose_name='运营商')
+    #nvrdeviceid = models.ForeignKey(NVRDevice,verbose_name='后台存储设备',null=True)
 

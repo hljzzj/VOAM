@@ -3,14 +3,13 @@ from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.shortcuts import render_to_response
 from website.forms import AddVideoDeviceForm,AddDeviceStatusForm,AddDeviceGroupForm,AddDeviceRegionForm,AddVideoDirectionForm,AddVideoTypeForm,AddDeviceBrandForm,AddDeviceTypeForm,UpdateVideoDeviceForm
-from website.models import DeviceStatus,DeviceGroup,DeviceRegion,VideoDirection,VideoType,DeviceBrand,DeviceType,ServerHostDevice,VideoDevice,NVRDevice,NetworkDevice
+from website.models import DeviceStatus,DeviceGroup,DeviceRegion,VideoDirection,VideoType,DeviceBrand,DeviceType,ServerHostDevice,VideoDevice,NVRDevice,NetworkDevice,Telecom
 
 from django.db.models import Q
 
 def Index(request):
     good_serverlist = VideoDevice.objects.all()
     return render_to_response('index.html')
-
 
 def AddBasicInfo(request):
     devicestatusform = AddDeviceStatusForm()
@@ -362,6 +361,8 @@ def AddVideoDevice(request):
     videotype_item = VideoType.objects.all()
     videodirection_item = VideoDirection.objects.all()
     videodeivce_list = VideoDevice.objects.all()
+    telecom_item = Telecom.objects.all()
+    nvrdevice_item = NVRDevice.objects.all()
 
     if request.method == 'POST':
         form = AddVideoDeviceForm(request.POST)
@@ -380,12 +381,14 @@ def AddVideoDevice(request):
             password = request.POST.get('password',None)
             gpslon = request.POST.get('gpslon',None)
             gpswei = request.POST.get('gpswei',None)
+            telecom = request.POST.get('telecom')
+            nvrdevice = request.POST.get('nvrdevice')
             print pid,name,group,region,direction,vtype,ip,username,password,gpslon,gpswei,brand,dtype
             result = VideoDevice.objects.filter(ip=ip).count()
             result1 = VideoDevice.objects.filter(pid=pid).count()
             if result == 0 and result1 == 0:
-                VideoDevice.objects.create(pid=pid,name=name,groupid_id=group,regionid_id=region,directionid_id=direction,vtypeid_id=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei,brandid_id=brand,dtypeid_id=dtype)
-                return render_to_response('AddVideoDevice.html',{'form':addvideodevice,'grouplist':group_item,'devicebrand_item':devicebrand_item,'devicetype_item':devicetype_item,'deviceregion_item':deviceregion_item,'videotype_item':videotype_item,'videotype_item':videotype_item,'videodirection_item':videodirection_item,'videodevice_list':videodeivce_list,'addstatus':'添加成功'})
+                VideoDevice.objects.create(pid=pid,name=name,groupid_id=group,regionid_id=region,directionid_id=direction,vtypeid_id=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei,brandid_id=brand,dtypeid_id=dtype,telecom_id=telecom,nvrdevice_id=nvrdevice)
+                return render_to_response('AddVideoDevice.html',{'form':addvideodevice,'grouplist':group_item,'devicebrand_item':devicebrand_item,'devicetype_item':devicetype_item,'deviceregion_item':deviceregion_item,'videotype_item':videotype_item,'videotype_item':videotype_item,'videodirection_item':videodirection_item,'videodevice_list':videodeivce_list,'telecom_item':telecom_item,'nvrdevice_item':nvrdevice_item,'addstatus':'添加成功'})
             elif result != 0:
                 return render_to_response('AddVideoDevice.html', {'form': addvideodevice,'grouplist':group_item,'devicebrand_item':devicebrand_item,'devicetype_item':devicetype_item,'deviceregion_item':deviceregion_item,'videotype_item':videotype_item,'videotype_item':videotype_item,'videodirection_item':videodirection_item,'videodevice_list':videodeivce_list, 'addstatus': 'IP已存在'})
             else:

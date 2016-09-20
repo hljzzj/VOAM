@@ -70,6 +70,8 @@
                 <td>类型</td>
                 <td>品牌</td>
                 <td>型号</td>
+                <td>运营商</td>
+                <td>后台存储</td>
                 <td>更新时间</td>
                 <td>创建时间</td>
                 <td>修改</td>
@@ -88,6 +90,8 @@
                     <td>{{ item.vtypeid.name}}</td>
                     <td>{{ item.brandid.name}}</td>
                     <td>{{ item.dtypeid.name}}</td>
+                    <td>{{ item.telecomid.name }}</td>
+                    <td>{{ item.nvrdeviceid.name }}</td>
                     <td style="font-size: 10px">{{ item.updatetime|date:"Y-m-d" }}<br>{{ item.updatetime|date:"H:i:s" }}</td>
                     <td>{{ item.addtime|date:"Y-m-d" }}</td>
                     <td><a class="btn bt-sm btn-success radius" type="button" href="../UpdateVideoDevice/{{ item.id }}/" target="_blank">修改</a></td>
