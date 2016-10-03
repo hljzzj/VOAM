@@ -27,19 +27,19 @@ class DeviceType(models.Model):
 class Telecom(models.Model):
     name = models.CharField(max_length=32,verbose_name='运营商')
 
-class NVRDevice(models.Manager):
+class NVRDevice(models.Model):
     name = models.CharField(max_length=32,verbose_name='录像机名称')
     ip = models.GenericIPAddressField(protocol='ipv4',verbose_name='录像机IP')
     username = models.CharField(max_length=32,verbose_name='录像机帐号')
     password = models.CharField(max_length=32,verbose_name='录像机密码')
 
-class NetworkDevice(models.Manager):
+class NetworkDevice(models.Model):
     name = models.CharField(max_length=32,verbose_name='网络设备名称')
     ip = models.GenericIPAddressField(protocol='ipv4',verbose_name='网络设备IP')
     username = models.CharField(max_length=32,verbose_name='网络设备帐号')
     password = models.CharField(max_length=32,verbose_name='网络设备密码')
 
-class ServerHostDevice(models.Manager):
+class ServerHostDevice(models.Model):
     name = models.CharField(max_length=32,verbose_name='服务器名称')
     ip = models.GenericIPAddressField(protocol='ipv4',verbose_name='服务器IP')
     username = models.CharField(max_length=32,verbose_name='服务器帐号')
@@ -49,6 +49,8 @@ class VideoDevice(models.Model):
     pid = models.CharField(max_length=32,verbose_name='摄像头编号',null=True)
     name = models.CharField(max_length=50,verbose_name='摄像头名称')
     groupid = models.ForeignKey(DeviceGroup,verbose_name='摄像头分组')
+    def __unicode__(self):
+        return self.groupid
     regionid = models.ForeignKey(DeviceRegion,verbose_name='摄像头区域划分')
     vtypeid = models.ForeignKey(VideoType,verbose_name='摄像头类别')
     directionid = models.ForeignKey(VideoDirection,verbose_name='摄像头方向')
@@ -63,5 +65,5 @@ class VideoDevice(models.Model):
     updatetime = models.DateTimeField(auto_now=True,verbose_name='主机更新时间',null=True)
     addtime = models.DateTimeField(auto_now_add=True,verbose_name='主机添加时间')
     telecomid = models.ForeignKey(Telecom,verbose_name='运营商')
-    #nvrdeviceid = models.ForeignKey(NVRDevice,verbose_name='后台存储设备',null=True)
+    nvrdeviceid = models.ForeignKey(NVRDevice,verbose_name='后台存储设备',null=True)
 

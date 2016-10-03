@@ -1,10 +1,16 @@
 # _*_ coding:utf-8 _*_
+
 from django import forms
+from django.forms import ModelForm
+from models import *
 
 class AddVideoDeviceForm(forms.Form):
-    pid = forms.CharField(required=False) # required=False允许为空
-    name = forms.CharField()
-    group = forms.CharField()
+    pid = forms.CharField(required=False,label='编号') # required=False允许为空
+    name = forms.CharField(label='名称')
+    group_list = DeviceGroup.objects.all()
+    print group_list
+    group = forms.ModelChoiceField(queryset=DeviceGroup.objects.all(),required=True,label=u'分组')
+
     region = forms.CharField()
     direction = forms.CharField()
     vtype = forms.CharField()
@@ -22,7 +28,7 @@ class UpdateVideoDeviceForm(forms.Form):
     pid = forms.CharField(required=False) # required=False允许为空
     name = forms.CharField()
     group = forms.CharField()
-    region = forms.Select()
+    region = forms.CharField()
     direction = forms.CharField()
     vtype = forms.CharField()
     brand = forms.CharField()

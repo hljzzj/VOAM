@@ -1,0 +1,12 @@
+{% extends "Master/muban.html" %}
+
+{% block content %}
+    {% for item in form %}
+        {{ item.label }}:{{ item }}
+        {{ item.errors }}
+    {% endfor %}
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}
