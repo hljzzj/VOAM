@@ -1,4 +1,4 @@
 from django.contrib import admin
-from website.models import VideoDevice
+from website.models import CameraDevice
 
-admin.site.register(VideoDevice)
+admin.site.register(CameraDevice)

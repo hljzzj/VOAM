@@ -2932,3 +2932,854 @@ Traceback (most recent call last):
   File "/home/zzj/PycharmProjects/VOAM/website/forms.py", line 11, in AddVideoDeviceForm
     print group_list.id
 AttributeError: 'QuerySet' object has no attribute 'id'
+2016-10-04 11:55:59,184 [Thread-8:123145331748864] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-10-04 11:55:59,266 [Thread-7:123145327542272] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-10-04 12:58:09,748 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 504, in AddVideoDevice
+    print group_item
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 141, in __repr__
+    return repr(data)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 496, in __repr__
+    u = six.text_type(self)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/models.py", line 12, in __unicode__
+    return self.name
+NameError: global name 'self' is not defined
+2016-10-04 12:58:13,005 [Thread-3:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 504, in AddVideoDevice
+    print group_item
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 141, in __repr__
+    return repr(data)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 496, in __repr__
+    u = six.text_type(self)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/models.py", line 12, in __unicode__
+    return self.name
+NameError: global name 'self' is not defined
+2016-10-04 13:52:05,013 [Thread-18:123145310715904] [django.request:170] [base:get_response] [WARNING]- Not Found: /EditData/
+2016-10-04 13:59:09,361 [Thread-26:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 528, in AddVideoDevice
+    VideoDevice.objects.create(pid=pid,name=name,groupid_id=group,regionid_id=region,directionid_id=direction,vtypeid_id=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei,brandid_id=brand,dtypeid_id=dtype,telecom_id=telecom,nvrdevice_id=nvrdevice)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 480, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'nvrdevice_id' is an invalid keyword argument for this function
+2016-10-04 14:12:32,032 [Thread-28:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 528, in AddVideoDevice
+    VideoDevice.objects.create(pid=pid,name=name,groupid_id=group,regionid_id=region,directionid_id=direction,vtypeid_id=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei,brandid_id=brand,dtypeid_id=dtype,telecom_id=telecom,nvrdevice_id=nvrdevice)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 480, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'nvrdevice_id' is an invalid keyword argument for this function
+2016-10-04 14:15:45,307 [Thread-29:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 528, in AddVideoDevice
+    VideoDevice.objects.create(pid=pid,name=name,groupid_id=group,regionid_id=region,directionid_id=direction,vtypeid_id=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei,brandid_id=brand,dtypeid_id=dtype,telecom_id=telecom,nvrdevice_id=nvrdevice)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 480, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'nvrdevice_id' is an invalid keyword argument for this function
+2016-10-04 16:52:30,813 [Thread-18:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 517, in AddVideoDevice
+    VideoDevice.objects.create(pid=pid,name=name,groupid_id=group,regionid_id=region,directionid_id=direction,vtypeid_id=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei,brandid_id=brand,dtypeid_id=dtype,telecom_id=telecom,nvrdevice_id=nvrdevice)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 480, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'nvrdevice_id' is an invalid keyword argument for this function
+2016-10-04 17:33:18,651 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 517, in AddVideoDevice
+    VideoDevice.objects.create(pid=pid,name=name,groupid_id=group,regionid_id=region,directionid_id=direction,vtypeid_id=vtype,ip=ip,username=username,password=password,gpslon=gpslon,gpswei=gpswei,brandid_id=brand,dtypeid_id=dtype,telecom_id=telecom,nvrdeviceid_id=nvrdevice)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 480, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'telecom_id' is an invalid keyword argument for this function
+2016-10-04 19:54:52,281 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddVideoDevice/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/VOAM/urls.py", line 17, in <module>
+    from website.views import Index,AddVideoDevice,AddBasicInfo,UpdateVideoDevice,DelVideoDevice
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 5, in <module>
+    from website.forms import AddVideoDeviceForm,AddDeviceStatusForm,AddDeviceGroupForm,AddDeviceRegionForm,AddVideoDirectionForm,AddVideoTypeForm,AddDeviceBrandForm,AddDeviceTypeForm,UpdateVideoDeviceForm
+ImportError: cannot import name AddVideoDeviceForm
+2016-10-04 20:11:26,528 [Thread-2:123145310715904] [django.request:170] [base:get_response] [WARNING]- Not Found: /AddVideoDevice/
+2016-10-04 20:11:37,531 [Thread-3:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddCameraDevice/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 490, in AddCameraDevice
+    return render_to_response('AddCameraDevice.html', {'form': addcameradevice,'cameradevice_list':cameradevice_list})
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/shortcuts.py", line 39, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: AddCameraDevice.html
+2016-10-04 20:26:34,208 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddCameraDevice/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 455, in AddCameraDevice
+    print cameradevice_list
+NameError: global name 'cameradevice_list' is not defined
+2016-10-04 20:28:08,765 [Thread-8:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddCameraDevice/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 481, in AddCameraDevice
+    dtypeid_id=dtype,telecomid_id=telecom,nvrdeviceid_id=nvrdevice)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 346, in create
+    obj = self.model(**kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 480, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'vtypeid_id' is an invalid keyword argument for this function
+2016-10-04 20:29:15,260 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddCameraDevice/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 481, in AddCameraDevice
+    dtypeid_id=dtype,telecomid_id=telecom,nvrdeviceid_id=nvrdevice)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 734, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 762, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 846, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 885, in _do_insert
+    using=using, raw=raw)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/sql/compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/mysql/base.py", line 129, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/Library/Python/2.7/site-packages/MySQL_python-1.2.4b4-py2.7-macosx-10.11-intel.egg/MySQLdb/cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "/Library/Python/2.7/site-packages/MySQL_python-1.2.4b4-py2.7-macosx-10.11-intel.egg/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1048, "Column 'ctypeid_id' cannot be null")
+2016-10-04 20:32:18,919 [Thread-10:123145314922496] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddCameraDevice/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 481, in AddCameraDevice
+    dtypeid_id=dtype,telecomid_id=telecom,nvrdeviceid_id=nvrdevice)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 734, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 762, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 846, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 885, in _do_insert
+    using=using, raw=raw)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/sql/compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/mysql/base.py", line 129, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/Library/Python/2.7/site-packages/MySQL_python-1.2.4b4-py2.7-macosx-10.11-intel.egg/MySQLdb/cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "/Library/Python/2.7/site-packages/MySQL_python-1.2.4b4-py2.7-macosx-10.11-intel.egg/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1048, "Column 'ctypeid_id' cannot be null")
+2016-10-04 20:33:32,224 [Thread-7:123145314922496] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddCameraDevice/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 474, in AddCameraDevice
+    print pid,name,group,region,direction,vtype,ip,username,password,gpslon,gpswei,brand,dtype
+NameError: global name 'vtype' is not defined
+2016-10-04 20:34:03,134 [Thread-3:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddCameraDevice/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 481, in AddCameraDevice
+    dtypeid_id=dtype,telecomid_id=telecom,nvrdeviceid_id=nvrdevice)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 734, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 762, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 846, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 885, in _do_insert
+    using=using, raw=raw)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/sql/compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/mysql/base.py", line 129, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/Library/Python/2.7/site-packages/MySQL_python-1.2.4b4-py2.7-macosx-10.11-intel.egg/MySQLdb/cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "/Library/Python/2.7/site-packages/MySQL_python-1.2.4b4-py2.7-macosx-10.11-intel.egg/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1048, "Column 'ctypeid_id' cannot be null")
+2016-10-04 20:34:30,564 [Thread-13:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddCameraDevice/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 481, in AddCameraDevice
+    dtypeid_id=dtype,telecomid_id=telecom,nvrdeviceid_id=nvrdevice)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 734, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 762, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 846, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 885, in _do_insert
+    using=using, raw=raw)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/sql/compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/mysql/base.py", line 129, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/Library/Python/2.7/site-packages/MySQL_python-1.2.4b4-py2.7-macosx-10.11-intel.egg/MySQLdb/cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "/Library/Python/2.7/site-packages/MySQL_python-1.2.4b4-py2.7-macosx-10.11-intel.egg/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1048, "Column 'ctypeid_id' cannot be null")
+2016-10-04 20:46:37,516 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddCameraDevice/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 481, in AddCameraDevice
+    dtypeid_id=dtype,telecomid_id=telecom,nvrdeviceid_id=nvrdevice)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 734, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 762, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 846, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 885, in _do_insert
+    using=using, raw=raw)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/sql/compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/mysql/base.py", line 129, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/Library/Python/2.7/site-packages/MySQL_python-1.2.4b4-py2.7-macosx-10.11-intel.egg/MySQLdb/cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "/Library/Python/2.7/site-packages/MySQL_python-1.2.4b4-py2.7-macosx-10.11-intel.egg/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1048, "Column 'ctypeid_id' cannot be null")
+2016-10-04 20:47:11,468 [Thread-5:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddCameraDevice/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 481, in AddCameraDevice
+    dtypeid_id=dtype,telecomid_id=telecom,nvrdeviceid_id=nvrdevice)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 734, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 762, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 846, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/base.py", line 885, in _do_insert
+    using=using, raw=raw)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/models/sql/compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/mysql/base.py", line 129, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/Library/Python/2.7/site-packages/MySQL_python-1.2.4b4-py2.7-macosx-10.11-intel.egg/MySQLdb/cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "/Library/Python/2.7/site-packages/MySQL_python-1.2.4b4-py2.7-macosx-10.11-intel.egg/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1048, "Column 'ctypeid_id' cannot be null")
+2016-10-05 16:28:53,063 [Thread-2:123145310715904] [django.request:170] [base:get_response] [WARNING]- Not Found: /UpdateVideoDevice/1/
+2016-10-05 16:28:53,324 [Thread-3:123145310715904] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-10-05 16:28:53,421 [Thread-4:123145310715904] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-10-05 16:29:03,938 [Thread-5:123145310715904] [django.request:170] [base:get_response] [WARNING]- Not Found: /UpdateCameraDevice/
+2016-10-05 16:54:17,186 [Thread-3:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/VOAM/urls.py", line 17, in <module>
+    from website.views import Index,AddCameraDevice,AddBasicInfo,UpdateCameraDevice,DelCameraDevice
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 5, in <module>
+    from website.forms import AddCameraDeviceForm,AddDeviceStatusForm,AddDeviceGroupForm,AddDeviceRegionForm,\
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/forms.py", line 27
+    pid = forms.CharField(required=False, label='编号',widget=)  # required=False允许为空
+                                                                ^
+SyntaxError: invalid syntax
+2016-10-05 16:54:27,722 [Thread-4:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/VOAM/urls.py", line 17, in <module>
+    from website.views import Index,AddCameraDevice,AddBasicInfo,UpdateCameraDevice,DelCameraDevice
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 5, in <module>
+    from website.forms import AddCameraDeviceForm,AddDeviceStatusForm,AddDeviceGroupForm,AddDeviceRegionForm,\
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/forms.py", line 27
+    pid = forms.CharField(required=False, label='编号',widget=)  # required=False允许为空
+                                                                ^
+SyntaxError: invalid syntax
+2016-10-06 00:45:35,115 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    return render_to_response('UpdateDevice.html', {'cameradevice_ID': cameradeivce_ID,'form':form})
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/shortcuts.py", line 39, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/debug.py", line 92, in render
+    output = force_text(output)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/utils/encoding.py", line 92, in force_text
+    s = six.text_type(s)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/utils/html.py", line 390, in <lambda>
+    klass.__unicode__ = lambda self: mark_safe(klass_unicode(self))
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/forms/forms.py", line 537, in __str__
+    return self.as_widget()
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/forms/forms.py", line 593, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/forms/widgets.py", line 511, in render
+    final_attrs = self.build_attrs(attrs, name=name)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/forms/widgets.py", line 213, in build_attrs
+    attrs = dict(self.attrs, **kwargs)
+TypeError: cannot convert dictionary update sequence element #0 to a sequence
+2016-10-06 00:46:23,793 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/VOAM/urls.py", line 17, in <module>
+    from website.views import Index,AddCameraDevice,AddBasicInfo,UpdateCameraDevice,DelCameraDevice
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 5, in <module>
+    from website.forms import AddCameraDeviceForm,AddDeviceStatusForm,AddDeviceGroupForm,AddDeviceRegionForm,\
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/forms.py", line 26, in <module>
+    class UpdateCameraDeviceForm(forms.Form):
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/forms.py", line 33, in UpdateCameraDeviceForm
+    widget=forms.Select(delattr(2)))
+TypeError: delattr expected 2 arguments, got 1
+2016-10-06 01:09:45,568 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    return render_to_response('UpdateDevice.html', {'cameradevice_ID': cameradeivce_ID,'form':form(CameraDevice.objects.filter(id=cameraID))})
+TypeError: 'UpdateCameraDeviceForm' object is not callable
+2016-10-06 01:09:51,216 [Thread-3:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    return render_to_response('UpdateDevice.html', {'cameradevice_ID': cameradeivce_ID,'form':form(CameraDevice.objects.filter(id=cameraID))})
+TypeError: 'UpdateCameraDeviceForm' object is not callable
+2016-10-06 01:11:33,746 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    return render_to_response('UpdateDevice.html', {'cameradevice_ID': cameradeivce_ID,'form':form(cameradeivce_ID)})
+TypeError: 'UpdateCameraDeviceForm' object is not callable
+2016-10-06 01:11:34,323 [Thread-3:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    return render_to_response('UpdateDevice.html', {'cameradevice_ID': cameradeivce_ID,'form':form(cameradeivce_ID)})
+TypeError: 'UpdateCameraDeviceForm' object is not callable
+2016-10-06 01:12:36,244 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    return render_to_response('UpdateDevice.html', {'cameradevice_ID': cameradeivce_ID,'form':form(cameradeivce_ID.all())})
+TypeError: 'UpdateCameraDeviceForm' object is not callable
+2016-10-06 01:12:37,935 [Thread-3:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    return render_to_response('UpdateDevice.html', {'cameradevice_ID': cameradeivce_ID,'form':form(cameradeivce_ID.all())})
+TypeError: 'UpdateCameraDeviceForm' object is not callable
+2016-10-06 01:12:50,753 [Thread-4:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    return render_to_response('UpdateDevice.html', {'cameradevice_ID': cameradeivce_ID,'form':form(cameradeivce_ID.values())})
+TypeError: 'UpdateCameraDeviceForm' object is not callable
+2016-10-06 01:12:54,272 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    return render_to_response('UpdateDevice.html', {'cameradevice_ID': cameradeivce_ID,'form':form(cameradeivce_ID.values())})
+TypeError: 'UpdateCameraDeviceForm' object is not callable
+2016-10-06 01:13:09,170 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    return render_to_response('UpdateDevice.html', {'cameradevice_ID': cameradeivce_ID,'form':form(cameradeivce_ID.values)})
+TypeError: 'UpdateCameraDeviceForm' object is not callable
+2016-10-06 01:13:22,534 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    return render_to_response('UpdateDevice.html', {'cameradevice_ID': cameradeivce_ID,'form':form(cameradeivce_ID.value)})
+AttributeError: 'QuerySet' object has no attribute 'value'
+2016-10-06 01:14:58,260 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    return render_to_response('UpdateDevice.html', {'cameradevice_ID': cameradeivce_ID,'form':form(isinstance(cameradeivce_ID))})
+TypeError: isinstance expected 2 arguments, got 1
+2016-10-06 01:15:00,882 [Thread-3:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    return render_to_response('UpdateDevice.html', {'cameradevice_ID': cameradeivce_ID,'form':form(isinstance(cameradeivce_ID))})
+TypeError: isinstance expected 2 arguments, got 1
+2016-10-06 01:15:35,321 [Thread-4:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    return render_to_response('UpdateDevice.html', {'cameradevice_ID': cameradeivce_ID,'form':form(isinstance(CameraDevice.objects.filter(id=cameraID)))})
+TypeError: isinstance expected 2 arguments, got 1
+2016-10-06 01:15:39,102 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    return render_to_response('UpdateDevice.html', {'cameradevice_ID': cameradeivce_ID,'form':form(isinstance(CameraDevice.objects.filter(id=cameraID)))})
+TypeError: isinstance expected 2 arguments, got 1
+2016-10-06 01:22:50,791 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    edit_form = form(instance=cameraID)
+TypeError: 'UpdateCameraDeviceForm' object is not callable
+2016-10-06 01:22:53,549 [Thread-3:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    edit_form = form(instance=cameraID)
+TypeError: 'UpdateCameraDeviceForm' object is not callable
+2016-10-06 03:40:11,841 [Thread-4:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    edit_form = form(instance=cameraID)
+TypeError: 'UpdateCameraDeviceForm' object is not callable
+2016-10-06 03:52:06,684 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    edit_form = form(instance=cameraID)
+TypeError: 'UpdateCameraDeviceForm' object is not callable
+2016-10-06 03:52:08,461 [Thread-3:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    edit_form = form(instance=cameraID)
+TypeError: 'UpdateCameraDeviceForm' object is not callable
+2016-10-06 03:52:41,642 [Thread-4:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    edit_form = form()
+TypeError: 'UpdateCameraDeviceForm' object is not callable
+2016-10-06 03:52:46,123 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    edit_form = form()
+TypeError: 'UpdateCameraDeviceForm' object is not callable
+2016-10-06 03:52:52,527 [Thread-3:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 414, in UpdateCameraDevice
+    edit_form = form
+TypeError: 'UpdateCameraDeviceForm' object is not callable
+2016-10-06 04:03:44,801 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/VOAM/urls.py", line 17, in <module>
+    from website.views import Index,AddCameraDevice,AddBasicInfo,UpdateCameraDevice,DelCameraDevice
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 5, in <module>
+    from website.forms import AddCameraDeviceForm,AddDeviceStatusForm,AddDeviceGroupForm,AddDeviceRegionForm,\
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/forms.py", line 26, in <module>
+    class UpdateCameraDeviceForm(forms.Form):
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/forms.py", line 33, in UpdateCameraDeviceForm
+    widget=forms.Select(choices=1))
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/forms/widgets.py", line 506, in __init__
+    self.choices = list(choices)
+TypeError: 'int' object is not iterable
+2016-10-06 04:15:34,422 [Thread-2:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/VOAM/urls.py", line 17, in <module>
+    from website.views import Index,AddCameraDevice,AddBasicInfo,UpdateCameraDevice,DelCameraDevice
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 5, in <module>
+    from website.forms import AddCameraDeviceForm,AddDeviceStatusForm,AddDeviceGroupForm,AddDeviceRegionForm,\
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/forms.py", line 26, in <module>
+    class UpdateCameraDeviceForm(forms.Form):
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/forms.py", line 33, in UpdateCameraDeviceForm
+    widget=forms.Select(),choices='1')
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/forms/models.py", line 1146, in __init__
+    *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'choices'
+2016-10-06 04:15:38,056 [Thread-3:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/VOAM/urls.py", line 17, in <module>
+    from website.views import Index,AddCameraDevice,AddBasicInfo,UpdateCameraDevice,DelCameraDevice
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 5, in <module>
+    from website.forms import AddCameraDeviceForm,AddDeviceStatusForm,AddDeviceGroupForm,AddDeviceRegionForm,\
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/forms.py", line 26, in <module>
+    class UpdateCameraDeviceForm(forms.Form):
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/forms.py", line 33, in UpdateCameraDeviceForm
+    widget=forms.Select(),choices='1')
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/forms/models.py", line 1146, in __init__
+    *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'choices'
+2016-10-06 04:15:42,274 [Thread-4:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/VOAM/urls.py", line 17, in <module>
+    from website.views import Index,AddCameraDevice,AddBasicInfo,UpdateCameraDevice,DelCameraDevice
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 5, in <module>
+    from website.forms import AddCameraDeviceForm,AddDeviceStatusForm,AddDeviceGroupForm,AddDeviceRegionForm,\
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/forms.py", line 26, in <module>
+    class UpdateCameraDeviceForm(forms.Form):
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/forms.py", line 33, in UpdateCameraDeviceForm
+    widget=forms.Select(),choices='1')
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/forms/models.py", line 1146, in __init__
+    *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'choices'
+2016-10-06 04:18:18,694 [Thread-5:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/VOAM/urls.py", line 17, in <module>
+    from website.views import Index,AddCameraDevice,AddBasicInfo,UpdateCameraDevice,DelCameraDevice
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 5, in <module>
+    from website.forms import AddCameraDeviceForm,AddDeviceStatusForm,AddDeviceGroupForm,AddDeviceRegionForm,\
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/forms.py", line 26, in <module>
+    class UpdateCameraDeviceForm(forms.Form):
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/forms.py", line 33, in UpdateCameraDeviceForm
+    widget=forms.Select(),choices='1')
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/forms/models.py", line 1146, in __init__
+    *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'choices'
+2016-10-06 04:25:48,707 [Thread-12:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 415, in UpdateCameraDevice
+    return render_to_response('UpdateDevice.html', {'cameradevice_ID': cameradeivce_ID,'form':edit_form})
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/shortcuts.py", line 39, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/backends/django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 191, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/defaulttags.py", line 872, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 318, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 424, in compile_filter
+    return FilterExpression(token, self)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 634, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 430, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+TemplateSyntaxError: Invalid filter: 'camerainfo'
+2016-10-06 04:27:49,799 [Thread-14:123145310715904] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/2/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ZZJMAC/PycharmProjects/VOAM/website/views.py", line 415, in UpdateCameraDevice
+    return render_to_response('UpdateDevice.html', {'cameradevice_ID': cameradeivce_ID,'form':edit_form})
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/shortcuts.py", line 39, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/backends/django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 191, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 342, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/defaulttags.py", line 872, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 318, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 424, in compile_filter
+    return FilterExpression(token, self)
+  File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 640, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: ' and form.group' from 'camerainfo.groupid and form.group'

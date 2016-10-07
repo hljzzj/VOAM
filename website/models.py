@@ -5,33 +5,51 @@ from django.db import models
 
 class DeviceStatus(models.Model):
     name = models.CharField(max_length=50,verbose_name='设备状态分类')
+    def __unicode__(self):
+        return self.name,self,id
 
 class DeviceGroup(models.Model):
     name = models.CharField(max_length=50,verbose_name='设备分组')
+    def __unicode__(self):
+        return self.name
 
 class DeviceRegion(models.Model):
     name = models.CharField(max_length=50,verbose_name='设备分区')
+    def __unicode__(self):
+        return self.name
 
-class VideoDirection(models.Model):
+class CameraDirection(models.Model):
     name = models.CharField(max_length=50,verbose_name='摄像头方向')
+    def __unicode__(self):
+        return self.name
 
-class VideoType(models.Model):
+class CameraType(models.Model):
     name = models.CharField(max_length=32,verbose_name='摄像头分类')
+    def __unicode__(self):
+        return self.name
 
 class DeviceBrand(models.Model):
     name = models.CharField(max_length=32,verbose_name='设备品牌')
+    def __unicode__(self):
+        return self.name
 
 class DeviceType(models.Model):
     brandid = models.ForeignKey(DeviceBrand,verbose_name='关联设备品牌ID')
     name = models.CharField(max_length=32,verbose_name='设备型号')
+    def __unicode__(self):
+        return self.name
 class Telecom(models.Model):
     name = models.CharField(max_length=32,verbose_name='运营商')
+    def __unicode__(self):
+        return self.name
 
 class NVRDevice(models.Model):
     name = models.CharField(max_length=32,verbose_name='录像机名称')
     ip = models.GenericIPAddressField(protocol='ipv4',verbose_name='录像机IP')
     username = models.CharField(max_length=32,verbose_name='录像机帐号')
     password = models.CharField(max_length=32,verbose_name='录像机密码')
+    def __unicode__(self):
+        return self.name
 
 class NetworkDevice(models.Model):
     name = models.CharField(max_length=32,verbose_name='网络设备名称')
@@ -45,15 +63,13 @@ class ServerHostDevice(models.Model):
     username = models.CharField(max_length=32,verbose_name='服务器帐号')
     password = models.CharField(max_length=32,verbose_name='服务器密码')
 
-class VideoDevice(models.Model):
+class CameraDevice(models.Model):
     pid = models.CharField(max_length=32,verbose_name='摄像头编号',null=True)
     name = models.CharField(max_length=50,verbose_name='摄像头名称')
     groupid = models.ForeignKey(DeviceGroup,verbose_name='摄像头分组')
-    def __unicode__(self):
-        return self.groupid
     regionid = models.ForeignKey(DeviceRegion,verbose_name='摄像头区域划分')
-    vtypeid = models.ForeignKey(VideoType,verbose_name='摄像头类别')
-    directionid = models.ForeignKey(VideoDirection,verbose_name='摄像头方向')
+    ctypeid = models.ForeignKey(CameraType,verbose_name='摄像头类别')
+    directionid = models.ForeignKey(CameraDirection,verbose_name='摄像头方向')
     ip = models.GenericIPAddressField(protocol='ipv4',verbose_name='摄像机IP')
     username = models.CharField(max_length=50,verbose_name='摄像头帐号',null=True)
     password = models.CharField(max_length=50,verbose_name='摄像头密码',null=True)

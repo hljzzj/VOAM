@@ -21,13 +21,13 @@
     <table id="16" parent="1" name="website_deviceregion"/>
     <table id="17" parent="1" name="website_devicestatus"/>
     <table id="18" parent="1" name="website_devicetype"/>
-    <table id="19" parent="1" name="website_videodevice"/>
-    <table id="20" parent="1" name="website_videodirection"/>
-    <table id="21" parent="1" name="website_videotype"/>
-    <table id="22" parent="1" name="website_telecom"/>
-    <table id="23" parent="1" name="website_networkdevice"/>
-    <table id="24" parent="1" name="website_nvrdevice"/>
-    <table id="25" parent="1" name="website_serverhostdevice"/>
+    <table id="19" parent="1" name="website_telecom"/>
+    <table id="20" parent="1" name="website_networkdevice"/>
+    <table id="21" parent="1" name="website_nvrdevice"/>
+    <table id="22" parent="1" name="website_serverhostdevice"/>
+    <table id="23" parent="1" name="website_cameradevice"/>
+    <table id="24" parent="1" name="website_cameradirection"/>
+    <table id="25" parent="1" name="website_cameratype"/>
     <column id="26" parent="4" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
@@ -441,217 +441,217 @@ model</columns>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="122" parent="19" name="pid">
+    <column id="122" parent="19" name="name">
+      <mandatory>1</mandatory>
       <data-type>varchar(32)|0</data-type>
     </column>
-    <column id="123" parent="19" name="name">
+    <key id="123" parent="19" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="124" parent="20" name="id">
       <mandatory>1</mandatory>
-      <data-type>varchar(50)|0</data-type>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
     </column>
-    <column id="124" parent="19" name="ip">
+    <column id="125" parent="20" name="name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="126" parent="20" name="ip">
       <mandatory>1</mandatory>
       <data-type>char(39)|0</data-type>
     </column>
-    <column id="125" parent="19" name="username">
+    <column id="127" parent="20" name="username">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="128" parent="20" name="password">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <key id="129" parent="20" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="130" parent="21" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="131" parent="21" name="name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="132" parent="21" name="ip">
+      <mandatory>1</mandatory>
+      <data-type>char(39)|0</data-type>
+    </column>
+    <column id="133" parent="21" name="username">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="134" parent="21" name="password">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <key id="135" parent="21" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="136" parent="22" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="137" parent="22" name="name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="138" parent="22" name="ip">
+      <mandatory>1</mandatory>
+      <data-type>char(39)|0</data-type>
+    </column>
+    <column id="139" parent="22" name="username">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="140" parent="22" name="password">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <key id="141" parent="22" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="142" parent="23" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="143" parent="23" name="pid">
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="144" parent="23" name="name">
+      <mandatory>1</mandatory>
       <data-type>varchar(50)|0</data-type>
     </column>
-    <column id="126" parent="19" name="password">
+    <column id="145" parent="23" name="ip">
+      <mandatory>1</mandatory>
+      <data-type>char(39)|0</data-type>
+    </column>
+    <column id="146" parent="23" name="username">
       <data-type>varchar(50)|0</data-type>
     </column>
-    <column id="127" parent="19" name="gpslon">
+    <column id="147" parent="23" name="password">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="148" parent="23" name="gpslon">
       <data-type>varchar(18)|0</data-type>
     </column>
-    <column id="128" parent="19" name="gpswei">
+    <column id="149" parent="23" name="gpswei">
       <data-type>varchar(18)|0</data-type>
     </column>
-    <column id="129" parent="19" name="updatetime">
+    <column id="150" parent="23" name="updatetime">
       <data-type>datetime|0</data-type>
     </column>
-    <column id="130" parent="19" name="addtime">
+    <column id="151" parent="23" name="addtime">
       <mandatory>1</mandatory>
       <data-type>datetime|0</data-type>
     </column>
-    <column id="131" parent="19" name="brandid_id">
+    <column id="152" parent="23" name="brandid_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="132" parent="19" name="directionid_id">
+    <column id="153" parent="23" name="ctypeid_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="133" parent="19" name="dtypeid_id">
+    <column id="154" parent="23" name="directionid_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="134" parent="19" name="groupid_id">
+    <column id="155" parent="23" name="dtypeid_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="135" parent="19" name="regionid_id">
+    <column id="156" parent="23" name="groupid_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="136" parent="19" name="statusid_id">
+    <column id="157" parent="23" name="nvrdeviceid_id">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="137" parent="19" name="telecomid_id">
+    <column id="158" parent="23" name="regionid_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="138" parent="19" name="vtypeid_id">
+    <column id="159" parent="23" name="statusid_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="160" parent="23" name="telecomid_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="139" parent="19" name="nvrdeviceid_id">
-      <data-type>int(11)|0</data-type>
-    </column>
-    <index id="140" parent="19" name="website_videodevice_0a2e9eba">
+    <index id="161" parent="23" name="website_cameradevice_0a2e9eba">
       <columns>nvrdeviceid_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="141" parent="19" name="website_videodevice_29c2dc04">
+    <index id="162" parent="23" name="website_cameradevice_29c2dc04">
       <columns>groupid_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="142" parent="19" name="website_videodevice_38739a82">
+    <index id="163" parent="23" name="website_cameradevice_38739a82">
       <columns>regionid_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="143" parent="19" name="website_videodevice_882ab1d2">
+    <index id="164" parent="23" name="website_cameradevice_7ef92b22">
+      <columns>ctypeid_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="165" parent="23" name="website_cameradevice_882ab1d2">
       <columns>directionid_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="144" parent="19" name="website_videodevice_991e3040">
+    <index id="166" parent="23" name="website_cameradevice_991e3040">
       <columns>telecomid_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="145" parent="19" name="website_videodevice_a1f33a7f">
+    <index id="167" parent="23" name="website_cameradevice_a1f33a7f">
       <columns>brandid_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="146" parent="19" name="website_videodevice_bd646693">
+    <index id="168" parent="23" name="website_cameradevice_bd646693">
       <columns>statusid_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="147" parent="19" name="website_videodevice_d21d1c14">
-      <columns>vtypeid_id</columns>
-      <desc-columns></desc-columns>
-    </index>
-    <index id="148" parent="19" name="website_videodevice_dd9f8b11">
+    <index id="169" parent="23" name="website_cameradevice_dd9f8b11">
       <columns>dtypeid_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="149" parent="19" name="PRIMARY">
+    <key id="170" parent="23" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <column id="150" parent="20" name="id">
+    <column id="171" parent="24" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="151" parent="20" name="name">
+    <column id="172" parent="24" name="name">
       <mandatory>1</mandatory>
       <data-type>varchar(50)|0</data-type>
     </column>
-    <key id="152" parent="20" name="PRIMARY">
+    <key id="173" parent="24" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <column id="153" parent="21" name="id">
+    <column id="174" parent="25" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="154" parent="21" name="name">
-      <mandatory>1</mandatory>
-      <data-type>varchar(32)|0</data-type>
-    </column>
-    <key id="155" parent="21" name="PRIMARY">
-      <columns>id</columns>
-      <primary>1</primary>
-    </key>
-    <column id="156" parent="22" name="id">
-      <mandatory>1</mandatory>
-      <data-type>int(11)|0</data-type>
-      <sequence-identity>1</sequence-identity>
-    </column>
-    <column id="157" parent="22" name="name">
-      <mandatory>1</mandatory>
-      <data-type>varchar(32)|0</data-type>
-    </column>
-    <key id="158" parent="22" name="PRIMARY">
-      <columns>id</columns>
-      <primary>1</primary>
-    </key>
-    <column id="159" parent="23" name="id">
-      <mandatory>1</mandatory>
-      <data-type>int(11)|0</data-type>
-      <sequence-identity>1</sequence-identity>
-    </column>
-    <column id="160" parent="23" name="name">
-      <mandatory>1</mandatory>
-      <data-type>varchar(32)|0</data-type>
-    </column>
-    <column id="161" parent="23" name="ip">
-      <mandatory>1</mandatory>
-      <data-type>char(39)|0</data-type>
-    </column>
-    <column id="162" parent="23" name="username">
-      <mandatory>1</mandatory>
-      <data-type>varchar(32)|0</data-type>
-    </column>
-    <column id="163" parent="23" name="password">
-      <mandatory>1</mandatory>
-      <data-type>varchar(32)|0</data-type>
-    </column>
-    <key id="164" parent="23" name="PRIMARY">
-      <columns>id</columns>
-      <primary>1</primary>
-    </key>
-    <column id="165" parent="24" name="id">
-      <mandatory>1</mandatory>
-      <data-type>int(11)|0</data-type>
-      <sequence-identity>1</sequence-identity>
-    </column>
-    <column id="166" parent="24" name="name">
-      <mandatory>1</mandatory>
-      <data-type>varchar(32)|0</data-type>
-    </column>
-    <column id="167" parent="24" name="ip">
-      <mandatory>1</mandatory>
-      <data-type>char(39)|0</data-type>
-    </column>
-    <column id="168" parent="24" name="username">
-      <mandatory>1</mandatory>
-      <data-type>varchar(32)|0</data-type>
-    </column>
-    <column id="169" parent="24" name="password">
-      <mandatory>1</mandatory>
-      <data-type>varchar(32)|0</data-type>
-    </column>
-    <key id="170" parent="24" name="PRIMARY">
-      <columns>id</columns>
-      <primary>1</primary>
-    </key>
-    <column id="171" parent="25" name="id">
-      <mandatory>1</mandatory>
-      <data-type>int(11)|0</data-type>
-      <sequence-identity>1</sequence-identity>
-    </column>
-    <column id="172" parent="25" name="name">
-      <mandatory>1</mandatory>
-      <data-type>varchar(32)|0</data-type>
-    </column>
-    <column id="173" parent="25" name="ip">
-      <mandatory>1</mandatory>
-      <data-type>char(39)|0</data-type>
-    </column>
-    <column id="174" parent="25" name="username">
-      <mandatory>1</mandatory>
-      <data-type>varchar(32)|0</data-type>
-    </column>
-    <column id="175" parent="25" name="password">
+    <column id="175" parent="25" name="name">
       <mandatory>1</mandatory>
       <data-type>varchar(32)|0</data-type>
     </column>

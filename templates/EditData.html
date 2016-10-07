@@ -1,10 +1,12 @@
 {% extends "Master/muban.html" %}
 
 {% block content %}
-    {% for item in form %}
-        {{ item.label }}:{{ item }}
-        {{ item.errors }}
-    {% endfor %}
+    <div class="form-actions">
+        <form action='/AddCameraDevice/' method="post" style="align-content: center">
+            {{ form }}
+        <input type="submit" value="添加" class="btn btn-default"><span>{{ status }}</span>
+        </form>
+    </div>
 {% endblock %}
 
 {% block javascript %}

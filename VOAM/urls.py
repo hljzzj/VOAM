@@ -14,14 +14,14 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from website.views import Index,AddVideoDevice,AddBasicInfo,UpdateVideoDevice,DelVideoDevice
+from website.views import Index,AddCameraDevice,AddBasicInfo,UpdateCameraDevice,DelCameraDevice
 
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$',Index),
-    url(r'^AddVideoDevice/$',AddVideoDevice),
+    url(r'^AddCameraDevice/$',AddCameraDevice),
     url(r'^AddBasicInfo/$',AddBasicInfo),
-    url(r'^UpdateVideoDevice/(?P<videoID>\d*)/$',UpdateVideoDevice),
-    url(r'^DelVideoDevice/(?P<videoID>\d*)/$',DelVideoDevice),
+    url(r'^UpdateCameraDevice/(?P<cameraID>\d*)/$',UpdateCameraDevice),
+    url(r'^DelCameraDevice/(?P<cameraID>\d*)/$',DelCameraDevice),
 ]

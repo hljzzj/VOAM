@@ -8,10 +8,10 @@
             <h3 class="panel-title">添加摄像头</h3>
         </div>
         <div class="panel-body">
-            <form action='/AddVideoDevice/' method="post">
+            <form action='/AddCameraDevice/' method="post">
                 {{ form }}
                 {{ form.error }}
-
+                <input type="submit" value="添加" class="btn bt-sm btn-blue radius"><span>{{ status }}</span>
             </form>
         </div>
     </div>
@@ -37,24 +37,24 @@
                 <td>删除</td>
 
             </tr>
-            {% for item in videodevice_list %}
+            {% for item in cameradevice_list %}
                 <tr>
                     <td>{{ item.pid }}</td>
-                    <td><a href="../UpdateVideoDevice/{{ item.id }}/" target="_blank">{{ item.name }}</a></td>
+                    <td><a href="../UpdateCameraDevice/{{ item.id }}/" target="_blank">{{ item.name }}</a></td>
                     <td>{{ item.regionid.name }}</td>
                     <td>{{ item.ip}}</td>
                     <td>{{ item.statusid.name}}</td>
                     <td>{{ item.groupid.name}}</td>
                     <td>{{ item.directionid.name}}</td>
-                    <td>{{ item.vtypeid.name}}</td>
+                    <td>{{ item.ctypeid.name}}</td>
                     <td>{{ item.brandid.name}}</td>
                     <td>{{ item.dtypeid.name}}</td>
                     <td>{{ item.telecomid.name }}</td>
                     <td>{{ item.nvrdeviceid.name }}</td>
                     <td style="font-size: 10px">{{ item.updatetime|date:"Y-m-d" }}<br>{{ item.updatetime|date:"H:i:s" }}</td>
                     <td>{{ item.addtime|date:"Y-m-d" }}</td>
-                    <td><a class="btn bt-sm btn-success radius" type="button" href="../UpdateVideoDevice/{{ item.id }}/" target="_blank">修改</a></td>
-                    <td><a class="btn bt-sm btn-danger radius" type="button" href="../DelVideoDevice/{{ item.id }}/" target="_blank">删除</a></td>
+                    <td><a class="btn bt-sm btn-success radius" type="button" href="../UpdateCameraDevice/{{ item.id }}/" target="_blank">修改</a></td>
+                    <td><a class="btn bt-sm btn-danger radius" type="button" href="../DelCameraDevice/{{ item.id }}/" target="_blank">删除</a></td>
                 </tr>
             {% endfor %}
 
