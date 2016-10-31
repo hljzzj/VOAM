@@ -8,10 +8,14 @@
             <h3 class="panel-title">添加摄像头</h3>
         </div>
         <div class="panel-body">
-            <form action='/AddCameraDevice/' method="post">
-                {{ form }}
-                {{ form.error }}
-                <input type="submit" value="添加" class="btn bt-sm btn-blue radius"><span>{{ status }}</span>
+
+            <form action='/AddCameraDevice/' method="post" >
+            {{ form.group.label_tag }}{{ form.group }}
+                {% for forms in form %}
+                {{ forms.label}}:{{ forms }}
+                {{ forms.error }}
+                {% endfor %}
+                <input type="submit" value="添加" class="btn bt-sm btn-primary radius"><span>{{ status }}</span>
             </form>
         </div>
     </div>
@@ -54,7 +58,7 @@
                     <td style="font-size: 10px">{{ item.updatetime|date:"Y-m-d" }}<br>{{ item.updatetime|date:"H:i:s" }}</td>
                     <td>{{ item.addtime|date:"Y-m-d" }}</td>
                     <td><a class="btn bt-sm btn-success radius" type="button" href="../UpdateCameraDevice/{{ item.id }}/" target="_blank">修改</a></td>
-                    <td><a class="btn bt-sm btn-danger radius" type="button" href="../DelCameraDevice/{{ item.id }}/" target="_blank">删除</a></td>
+                    <td><a class="btn bt-sm btn-danger radius" type="button" href="../DelCameraDevice/{{ item.id }}/" target="_blank" onclick="return confirm('你确认要删除设备吗？')">删除</a></td>
                 </tr>
             {% endfor %}
 

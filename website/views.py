@@ -1,7 +1,10 @@
 # coding:utf-8
 from django.http.response import HttpResponse
-from django.shortcuts import render
-from django.shortcuts import render_to_response
+
+from django.shortcuts import render_to_response,get_object_or_404
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
+from django.forms import ModelForm
 from website.forms import AddCameraDeviceForm,AddDeviceStatusForm,AddDeviceGroupForm,AddDeviceRegionForm,\
     AddCameraDirectionForm,AddCameraTypeForm,AddDeviceBrandForm,AddDeviceTypeForm,UpdateCameraDeviceForm
 from website.models import DeviceStatus,DeviceGroup,DeviceRegion,CameraDirection,CameraType,DeviceBrand,\
@@ -355,6 +358,7 @@ def AddBasicInfo(request):
                                                'devicetypelist': devicetype_list})
 
 
+'''
 def UpdateCameraDevice(request,cameraID):
     group_item = DeviceGroup.objects.all()
     devicebrand_item = DeviceBrand.objects.all()
@@ -413,7 +417,16 @@ def UpdateCameraDevice(request,cameraID):
     else:
         edit_form = form
         return render_to_response('UpdateDevice.html', {'cameradevice_ID': cameradeivce_ID,'form':edit_form})
+'''
 
+
+def UpdateCameraDevice(request,cameraID):
+    camera = get_object_or_404(CameraDevice,pk = int(id))
+    if request.method == "POST":
+        form = UpdateCameraDeviceForm(request.POST,instance=CameraDevice)
+        if form.is_valid():
+            camera = form.save()
+            return HttpResponseRedirect(reverse("camera_list"))
 
 def DelCameraDevice(request,cameraID):
     CameraDevice.objects.filter(id=cameraID).delete()
@@ -430,8 +443,8 @@ def DelCameraDevice(request,cameraID):
 def AddCameraDevice(request):
     addcameradevice = AddCameraDeviceForm()
     cameradevicelist = CameraDevice.objects.all()
-    print cameradevicelist
-    print addcameradevice
+    # print cameradevicelist
+    # print addcameradevice
     if request.method == 'POST':
         form = AddCameraDeviceForm(request.POST)
         if form.is_valid():
@@ -470,8 +483,10 @@ def AddCameraDevice(request):
                                                                   'cameradevice_list':cameradevicelist,
                                                                   'status':'ID已存在'})
         else:
+            print form
             return render_to_response('AddCameraDevice.html', {'form': addcameradevice,
-                                                               'cameradevice_list':cameradevicelist})
+                                                               'cameradevice_list':cameradevicelist,
+                                                               'status':'验证错误'})
     else:
         return render_to_response('AddCameraDevice.html', {'form': addcameradevice,
                                                            'cameradevice_list':cameradevicelist})

@@ -51,6 +51,11 @@ class NVRDevice(models.Model):
     def __unicode__(self):
         return self.name
 
+class PowerSupply(models.Model):
+    name = models.CharField(max_length=32,verbose_name='供电方式')
+    def __unicode__(self):
+        return self.name
+
 class NetworkDevice(models.Model):
     name = models.CharField(max_length=32,verbose_name='网络设备名称')
     ip = models.GenericIPAddressField(protocol='ipv4',verbose_name='网络设备IP')
@@ -82,4 +87,5 @@ class CameraDevice(models.Model):
     addtime = models.DateTimeField(auto_now_add=True,verbose_name='主机添加时间')
     telecomid = models.ForeignKey(Telecom,verbose_name='运营商')
     nvrdeviceid = models.ForeignKey(NVRDevice,verbose_name='后台存储设备',null=True)
+    powerid = models.CharField(max_length=32,verbose_name='供电标识',null=True)
 

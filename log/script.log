@@ -3783,3 +3783,113 @@ Traceback (most recent call last):
   File "/Library/Python/2.7/site-packages/Django-1.8.9-py2.7.egg/django/template/base.py", line 640, in __init__
     "from '%s'" % (token[upto:], token))
 TemplateSyntaxError: Could not parse the remainder: ' and form.group' from 'camerainfo.groupid and form.group'
+2016-10-08 12:52:34,904 [Thread-2:139925036472064] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddThreeNetwork/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/zzj/PycharmProjects/VOAM/VOAM/urls.py", line 17, in <module>
+    from website.views import Index,AddCameraDevice,AddBasicInfo,UpdateCameraDevice,DelCameraDevice
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 5, in <module>
+    from website.forms import AddCameraDeviceForm,AddDeviceStatusForm,AddDeviceGroupForm,AddDeviceRegionForm,\
+  File "/home/zzj/PycharmProjects/VOAM/website/forms.py", line 7, in <module>
+    class AddCameraDeviceForm(forms.Form):
+  File "/home/zzj/PycharmProjects/VOAM/website/forms.py", line 25, in AddCameraDeviceForm
+    powersupply = forms.ModelChoiceField(querset=PowerSupply.objects.all(),required=True,label=u'供电方式')
+TypeError: __init__() takes at least 2 arguments (3 given)
+2016-10-08 12:52:46,946 [Thread-3:139925036472064] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddCameraDevice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/zzj/PycharmProjects/VOAM/VOAM/urls.py", line 17, in <module>
+    from website.views import Index,AddCameraDevice,AddBasicInfo,UpdateCameraDevice,DelCameraDevice
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 5, in <module>
+    from website.forms import AddCameraDeviceForm,AddDeviceStatusForm,AddDeviceGroupForm,AddDeviceRegionForm,\
+  File "/home/zzj/PycharmProjects/VOAM/website/forms.py", line 7, in <module>
+    class AddCameraDeviceForm(forms.Form):
+  File "/home/zzj/PycharmProjects/VOAM/website/forms.py", line 25, in AddCameraDeviceForm
+    powersupply = forms.ModelChoiceField(querset=PowerSupply.objects.all(),required=True,label=u'供电方式')
+TypeError: __init__() takes at least 2 arguments (3 given)
+2016-10-08 12:52:47,848 [Thread-4:139925036472064] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/zzj/PycharmProjects/VOAM/VOAM/urls.py", line 17, in <module>
+    from website.views import Index,AddCameraDevice,AddBasicInfo,UpdateCameraDevice,DelCameraDevice
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 5, in <module>
+    from website.forms import AddCameraDeviceForm,AddDeviceStatusForm,AddDeviceGroupForm,AddDeviceRegionForm,\
+  File "/home/zzj/PycharmProjects/VOAM/website/forms.py", line 7, in <module>
+    class AddCameraDeviceForm(forms.Form):
+  File "/home/zzj/PycharmProjects/VOAM/website/forms.py", line 25, in AddCameraDeviceForm
+    powersupply = forms.ModelChoiceField(querset=PowerSupply.objects.all(),required=True,label=u'供电方式')
+TypeError: __init__() takes at least 2 arguments (3 given)
+2016-10-08 12:53:18,248 [Thread-2:140214441867008] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /AddCameraDevice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 433, in AddCameraDevice
+    print cameradevicelist
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 138, in __repr__
+    data = list(self[:REPR_OUTPUT_SIZE + 1])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 226, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorvalue
+OperationalError: (1054, "Unknown column 'website_cameradevice.powerid' in 'field list'")
+2016-10-13 11:03:46,328 [Thread-2:139932651747072] [django.request:170] [base:get_response] [WARNING]- Not Found: /AddVideoDevice/
+2016-10-13 11:03:46,437 [Thread-3:139932651747072] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-10-14 09:49:48,393 [Thread-3:139928788530944] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-10-14 10:44:16,456 [Thread-12:140620767487744] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /UpdateCameraDevice/3/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/zzj/PycharmProjects/VOAM/website/views.py", line 424, in UpdateCameraDevice
+    camera = get_object_or_404(CameraDevice,pk = int(id))
+TypeError: int() argument must be a string or a number, not 'builtin_function_or_method'
