@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22f86b17-100f-494d-b256-2c2b74fce953" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/VOAM.iml" afterPath="$PROJECT_DIR$/.idea/VOAM.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/a430bf54-a3f4-45fa-b7e7-e782b46b1aa1.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/a430bf54-a3f4-45fa-b7e7-e782b46b1aa1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/all.log" afterPath="$PROJECT_DIR$/log/all.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/script.log" afterPath="$PROJECT_DIR$/log/script.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/AddCameraDevice.html" afterPath="$PROJECT_DIR$/templates/AddCameraDevice.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/forms.py" afterPath="$PROJECT_DIR$/website/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/models.py" afterPath="$PROJECT_DIR$/website/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/views.py" afterPath="$PROJECT_DIR$/website/views.py" />
-    </list>
+    <list default="true" id="22f86b17-100f-494d-b256-2c2b74fce953" name="Default" comment="" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,10 +33,9 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/website/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="357" column="82" selection-start-line="357" selection-start-column="82" selection-end-line="357" selection-end-column="82" />
+            <state relative-caret-position="75">
+              <caret line="9" column="80" selection-start-line="9" selection-start-column="80" selection-end-line="9" selection-end-column="80" />
               <folding>
-                <element signature="e#15#60#0" expanded="true" />
                 <element signature="e#705#793#0" expanded="false" />
                 <element signature="e#826#29053#0" expanded="false" />
                 <element signature="e#29056#32715#1" expanded="false" />
@@ -549,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1475495006650</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="K49">
+      <created>1477923453354</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1477923453354</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -665,7 +660,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#15#60#0" expanded="true" />
             <element signature="e#705#793#0" expanded="false" />
             <element signature="e#826#29053#0" expanded="false" />
             <element signature="e#29056#32715#1" expanded="false" />
@@ -889,10 +883,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/website/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="357" column="82" selection-start-line="357" selection-start-column="82" selection-end-line="357" selection-end-column="82" />
+        <state relative-caret-position="75">
+          <caret line="9" column="80" selection-start-line="9" selection-start-column="80" selection-end-line="9" selection-end-column="80" />
           <folding>
-            <element signature="e#15#60#0" expanded="true" />
             <element signature="e#705#793#0" expanded="false" />
             <element signature="e#826#29053#0" expanded="false" />
             <element signature="e#29056#32715#1" expanded="false" />
