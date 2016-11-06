@@ -8,6 +8,11 @@ class DeviceStatus(models.Model):
     def __unicode__(self):
         return self.name,self,id
 
+class DeviceFault(models.Model):
+    name = models.CharField(max_length=50,verbose_name='设备故障原因')
+    def __unicode__(self):
+        return self.name
+
 class DeviceGroup(models.Model):
     name = models.CharField(max_length=50,verbose_name='设备分组')
     def __unicode__(self):
@@ -56,6 +61,11 @@ class PowerSupply(models.Model):
     def __unicode__(self):
         return self.name
 
+class PowerID(models.Model):
+    name = models.CharField(max_length=50,verbose_name='供电标识')
+    def __unicode__(self):
+        return self.name
+
 class NetworkDevice(models.Model):
     name = models.CharField(max_length=32,verbose_name='网络设备名称')
     ip = models.GenericIPAddressField(protocol='ipv4',verbose_name='网络设备IP')
@@ -81,11 +91,13 @@ class CameraDevice(models.Model):
     gpslon = models.CharField(max_length=18,verbose_name='经度',null=True)
     gpswei = models.CharField(max_length=18,verbose_name='纬度',null=True)
     statusid = models.ForeignKey(DeviceStatus,verbose_name='设备状态',null=True)
+    faultid = models.ForeignKey(DeviceFault,verbose_name='设备故障原因',null=True)
     brandid = models.ForeignKey(DeviceBrand, verbose_name='设备品牌')
     dtypeid = models.ForeignKey(DeviceType,verbose_name='设备型号')
     updatetime = models.DateTimeField(auto_now=True,verbose_name='主机更新时间',null=True)
     addtime = models.DateTimeField(auto_now_add=True,verbose_name='主机添加时间')
     telecomid = models.ForeignKey(Telecom,verbose_name='运营商')
     nvrdeviceid = models.ForeignKey(NVRDevice,verbose_name='后台存储设备',null=True)
-    powerid = models.CharField(max_length=32,verbose_name='供电标识',null=True)
+    powersupplyid = models.ForeignKey(PowerSupply,verbose_name='供电方式',null=True)
+    powerid = models.ForeignKey(PowerID,verbose_name='供电标识',null=True)
 

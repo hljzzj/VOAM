@@ -10,5 +10,5 @@ import datetime,time
 conn = mdb.connect('113.59.61.225', 'VOAM', 'Dzga@110', 'VOAM');
 print conn
 cur = conn.cursor(mdb.cursors.DictCursor);
-cur.execute("INSERT INTO website_devicegroup(ciso) VALUES ('海康威视'));
+cur.execute("INSERT INTO website_devicegroup(ciso) VALUES ('海康')");
 conn.commit()

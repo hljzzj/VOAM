@@ -4,11 +4,11 @@ from django.http.response import HttpResponse
 from django.shortcuts import render_to_response,get_object_or_404
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
+# from somewhere import handle_uploaded_file
 from django.forms import ModelForm
-from website.forms import AddCameraDeviceForm,AddDeviceStatusForm,AddDeviceGroupForm,AddDeviceRegionForm,\
-    AddCameraDirectionForm,AddCameraTypeForm,AddDeviceBrandForm,AddDeviceTypeForm,UpdateCameraDeviceForm
-from website.models import DeviceStatus,DeviceGroup,DeviceRegion,CameraDirection,CameraType,DeviceBrand,\
-    DeviceType,ServerHostDevice,CameraDevice,NVRDevice,NetworkDevice,Telecom
+# from .forms import ModelFormWithFileFild
+from website.forms import *
+from website.models import *
 
 from django.db.models import Q
 
@@ -419,6 +419,16 @@ def UpdateCameraDevice(request,cameraID):
         return render_to_response('UpdateDevice.html', {'cameradevice_ID': cameradeivce_ID,'form':edit_form})
 '''
 
+def CameraDeviceID(request,cameraID):
+    camera = CameraDevice.objects.filter(id=cameraID)
+    for item in camera: # 此处写法不对，应该有其它方法，待修改。
+        print item.statusid_id
+    if item.statusid_id == 1:
+        st = 'rgb(0, 174, 0)'
+    else:
+        st = 'rgb(255, 0, 0)'
+
+    return render_to_response('CameraDevice.html',{'device':camera,'st':st})
 
 def UpdateCameraDevice(request,cameraID):
     camera = get_object_or_404(CameraDevice,pk = int(id))
@@ -490,3 +500,21 @@ def AddCameraDevice(request):
     else:
         return render_to_response('AddCameraDevice.html', {'form': addcameradevice,
                                                            'cameradevice_list':cameradevicelist})
+
+
+def UpLoad(request):
+    if request.method == 'POST':
+        form = AddCameraDeviceForm(request.POST, request.FILES)
+        if form.is_valid():
+            handle_uploaded_file(request.FILES['file'])
+            return HttpResponseRedirect('/success/url/')
+    else:
+        form = AddCameraDeviceForm()
+    return render_to_response('UpLoad.html',{'form':form})
+def handle_uploaded_file(f):
+    with open('some/file/name.txt', 'wb+') as destiation:
+        for chunk in f.chunks():
+            destiation.write(chunk)
+
+def SearchDevice(request):
+    searchdeviceform = SearchDeviceFrom()
