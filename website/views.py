@@ -13,8 +13,9 @@ from website.models import *
 from django.db.models import Q
 
 def Index(request):
-    good_serverlist = CameraDevice.objects.all()
-    return render_to_response('index.html')
+    good_cameralist = CameraDevice.objects.filter(statusid=1)
+    bad_cameralist = CameraDevice.objects.filter(statusid=2)
+    return render_to_response('index.html',{'goodcameralist':good_cameralist,'badcameralist':bad_cameralist})
 
 def AddBasicInfo(request):
     devicestatusform = AddDeviceStatusForm()
@@ -425,10 +426,12 @@ def CameraDeviceID(request,cameraID):
         print item.statusid_id
     if item.statusid_id == 1:
         st = 'rgb(0, 174, 0)'
+        sttext = '正常'
     else:
         st = 'rgb(255, 0, 0)'
+        sttext = '故障'
 
-    return render_to_response('CameraDevice.html',{'device':camera,'st':st})
+    return render_to_response('CameraDevice.html',{'device':camera,'st':st,'sttext':sttext})
 
 def UpdateCameraDevice(request,cameraID):
     camera = get_object_or_404(CameraDevice,pk = int(id))

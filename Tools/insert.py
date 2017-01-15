@@ -4,6 +4,7 @@ import threading
 import Queue
 import MySQLdb as mdb
 import datetime,time
+import xlrd
 
 
 #print "通：%s" % ip["hostIP"]
@@ -12,3 +13,4 @@ print conn
 cur = conn.cursor(mdb.cursors.DictCursor);
 cur.execute("INSERT INTO website_devicegroup(ciso) VALUES ('海康')");
 conn.commit()
+
